@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
+import {SiGmail} from 'react-icons/si'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from "../assets/logo.png"
 
@@ -44,24 +44,24 @@ const Navbar = () => {
         </div>
 
         {/* SOCIAL ICONS */}
-        <div className='flex fixed flex-col top-[35%] left-0'>
+        <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
             <ul>
-                <li className='w-[160px] h-[60px] flex justify-between items-center'>
+                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-700'>
                     <a className="flex justify-between items-center w-full text-gray-300" href='/'>
                         LinkedIn <FaLinkedin size={30} />
                     </a>
                 </li>
-                <li>
+                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-black'>
                     <a className="flex justify-between items-center w-full text-gray-300" href='/'>
                         GitHub <FaGithub size={30} />
                     </a>
                 </li>
-                <li>
+                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-600'>
                     <a className="flex justify-between items-center w-full text-gray-300" href='/'>
-                        Email <HiOutlineMail size={30} />
+                        Email <SiGmail size={30} />
                     </a>
                 </li>
-                <li>
+                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-green-700'>
                     <a className="flex justify-between items-center w-full text-gray-300" href='/'>
                         Resume <BsFillPersonLinesFill size={30}/>
                     </a>

@@ -16,13 +16,13 @@ const Navbar = () => {
         {/* MENU */}
         
             <ul className='hidden md:flex '>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Portfolio</li>
-                <li>Education</li>
-                <li>Work</li>
-                <li>Contact</li>
+                <a href="/home"><li>Home</li></a>
+                <a href="/about"><li>About</li></a>
+                <a href="/skills"><li>Skills</li></a>
+                <a href="/project"><li>Portfolio</li></a>
+                <a href="/education"><li>Education</li></a>
+                <a href="/experience"><li>Work</li></a>
+                <a href="/contact"><li>Contact</li></a>
             </ul>
         
         {/* HAMBURGER */}
@@ -33,13 +33,13 @@ const Navbar = () => {
         {/* MOBILE MENU */}
         
         <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-                <li className='py-6 text-4xl'>Home</li>
-                <li className='py-6 text-4xl'>About</li>
-                <li className='py-6 text-4xl'>Skills</li>
-                <li className='py-6 text-4xl'>Portfolio</li>
-                <li className='py-6 text-4xl'>Education</li>
-                <li className='py-6 text-4xl'>Work</li>
-                <li className='py-6 text-4xl'>Contact</li>
+                <a href="/home"><li className='py-6 text-4xl'>Home</li></a>
+                <a href="/about"><li className='py-6 text-4xl'>About</li></a>
+                <a href="/skills"><li className='py-6 text-4xl'>Skills</li></a>
+                <a href="/project"><li className='py-6 text-4xl'>Portfolio</li></a>
+                <a href="/education"><li className='py-6 text-4xl'>Education</li></a>
+                <a href="/experience"><li className='py-6 text-4xl'>Work</li></a>
+                <a href="/contact"><li className='py-6 text-4xl'>Contact</li></a>
             </ul>
         
 

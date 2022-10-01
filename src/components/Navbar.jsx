@@ -18,10 +18,10 @@ const Navbar = () => {
             <ul className='hidden md:flex '>
                 <li>Home</li>
                 <li>About</li>
-                <li>Education</li>
                 <li>Skills</li>
-                <li>Work Experience</li>
-                <li>Project</li>
+                <li>Portfolio</li>
+                <li>Education</li>
+                <li>Work</li>
                 <li>Contact</li>
             </ul>
         
@@ -31,17 +31,17 @@ const Navbar = () => {
         </div>
 
         {/* MOBILE MENU */}
-        <div>
+        
         <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
                 <li className='py-6 text-4xl'>Home</li>
                 <li className='py-6 text-4xl'>About</li>
-                <li className='py-6 text-4xl'>Education</li>
                 <li className='py-6 text-4xl'>Skills</li>
-                <li className='py-6 text-4xl'>Work Experience</li>
-                <li className='py-6 text-4xl'>Project</li>
+                <li className='py-6 text-4xl'>Portfolio</li>
+                <li className='py-6 text-4xl'>Education</li>
+                <li className='py-6 text-4xl'>Work</li>
                 <li className='py-6 text-4xl'>Contact</li>
             </ul>
-        </div>
+        
 
         {/* SOCIAL ICONS */}
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>

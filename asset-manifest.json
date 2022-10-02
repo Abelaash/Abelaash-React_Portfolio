@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Abelaash-React_Portfolio/static/css/main.e1b22a87.css",
-    "main.js": "/Abelaash-React_Portfolio/static/js/main.9c6b4606.js",
+    "main.js": "/Abelaash-React_Portfolio/static/js/main.f36e4090.js",
     "static/media/ceya.PNG": "/Abelaash-React_Portfolio/static/media/ceya.57c5b323fbc4911be9b3.PNG",
     "static/media/workImg.PNG": "/Abelaash-React_Portfolio/static/media/workImg.e73c3ca2d528329de691.PNG",
     "static/media/logo.png": "/Abelaash-React_Portfolio/static/media/logo.3821e0ffe5b791469273.png",
@@ -14,10 +14,10 @@
     "static/media/javascript.png": "/Abelaash-React_Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Abelaash-React_Portfolio/index.html",
     "main.e1b22a87.css.map": "/Abelaash-React_Portfolio/static/css/main.e1b22a87.css.map",
-    "main.9c6b4606.js.map": "/Abelaash-React_Portfolio/static/js/main.9c6b4606.js.map"
+    "main.f36e4090.js.map": "/Abelaash-React_Portfolio/static/js/main.f36e4090.js.map"
   },
   "entrypoints": [
     "static/css/main.e1b22a87.css",
-    "static/js/main.9c6b4606.js"
+    "static/js/main.f36e4090.js"
   ]
 }

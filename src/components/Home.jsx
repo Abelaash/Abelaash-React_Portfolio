@@ -10,14 +10,11 @@ const Home = () => {
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Abelaash Giritharan
         </h1>
-        <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
+        {/* <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
           I'm second year Humber College
-        </h2>
+        </h2> */}
         <p className="text-[#8892b0] py-4 max-w-[700px]">
-          I'm a student studying at Humber College, specializing in Computer
-          Programming & Analysis. Currently, I'm doing an internship at A R Luxury
-          Management as a Full-Stack Developer intern. I'm more focused on building responsive
-          full-stack websites.
+          I'm a 2nd year student at Humber College enrolling to the Computer Programming and Analysis program with the skills in software and web development and seeking a Co-op work term in summer 2023
         </p>
         <div>
           <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">

@@ -20,14 +20,7 @@ const About = () => {
           </div>
           <div>
             <p>
-              I'm a Computer Programmer graduate at Humber College. Now
-              enrolling to my second year into my Advanced Diploma in Computer
-              Programming & Analysis program at Humber College. I love to
-              develop, create and build web and mobile applications. I am
-              passionate about frontend and backend development. I like to take
-              part in extracurricular activities such as working on projects
-              with other developers and taking part in clubs to learn new
-              techologies.
+              As a Computer Programming graduate from Humber College, I'm excited to be enrolling in my second year of the Advanced Diploma in Computer Programming & Analysis program. My passion lies in developing , creating, and building web and mobile applications, and I enjoy both frontend and backend development. I also enjoy participating in extracurricular activities such as working with other developers on projects and taking part in clubs to learn about new technologies.
             </p>
           </div>
         </div>

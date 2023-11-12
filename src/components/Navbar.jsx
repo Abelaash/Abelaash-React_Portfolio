@@ -47,6 +47,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="certification" smooth={true} duration={500}>
+            Professional Certifications
+          </Link>
+        </li>
+        <li>
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>

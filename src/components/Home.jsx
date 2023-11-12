@@ -14,7 +14,7 @@ const Home = () => {
           I'm second year Humber College
         </h2> */}
         <p className="text-[#8892b0] py-4 max-w-[700px]">
-          I'm a 2nd year student at Humber College enrolling to the Computer Programming and Analysis program with the skills in software and web development and seeking a Co-op work term in summer 2023
+          I'm a 2nd year student at Humber College enrolling to the Computer Programming and Analysis program with the skills in software and web development and seeking a 4/8 month Co-op work term starting Winter 2024
         </p>
         <div>
           <Link

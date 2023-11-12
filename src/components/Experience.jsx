@@ -12,6 +12,27 @@ const Experience = () => {
               </div>
             </div>
             <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
+            <div className="sm:text-right text-xl font-bold">
+                <p>
+                  Junior Software Engineer Intern
+                </p>
+                <p className='pt-4 '>
+                    Tech Mahindra
+                </p>
+                <p className='pt-4'>
+                    May. 2023 - August. 2023
+                </p>
+              </div>
+              <div>
+                  <ul className='list-inside'>
+                    <li>Followed coding standards and techniques using PEGA with the similarity of front-end and back-end languages</li>
+                    <li>Integrated external systems to send and retrieve data using REST APIs</li>
+                    <li>Gained proficiency in applying rulsets and using PEGA's PRPC guardrails</li>
+                    <li>Created case types to configure the design</li>
+                    <li>Learned how to develop an Activity and Data Page </li>
+                  </ul>
+                
+              </div>
               <div className="sm:text-right text-xl font-bold">
                 <p>
                   Full-Stack Developer Intern
@@ -20,7 +41,7 @@ const Experience = () => {
                     A R LUXURY MANAGEMENT
                 </p>
                 <p className='pt-4'>
-                    Aug. 2022 - Present
+                    August. 2022 - December. 2022
                 </p>
               </div>
 

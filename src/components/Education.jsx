@@ -30,10 +30,7 @@ const Education = () => {
                   <div>
                       <ul className='list-inside'>
                         <li className="">
-                            Courses Taking : Systems Design, Data Structures & Algorithms, Modern Web Technologies, Cross-Platform Mobile Development, High-Level Programming
-                        </li>
-                        <li className="pt-5">
-                            Dean's Honours List: <b>Winter 2022</b>
+                            Courses Taking : Application Testing, Advanced Database Programming, Newtwork & Telecommunications, Principles of Project Management, Web Application Development
                         </li>
                         
                       </ul>
@@ -54,7 +51,7 @@ const Education = () => {
                   <div>
                       <ul className='list-inside'>
                         <li>
-                            Favourite Courses: XML, Open-Source Programming
+                            Favourite Courses: XML, Open-Source Programming, ASP.NET
                         </li>
         
                        

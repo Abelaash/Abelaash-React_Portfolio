@@ -19,9 +19,9 @@ function App() {
       <Skills />
       <Projects />
       <Certifications />
-      <Achievements />
       <Education />
       <Experience />
+      <Achievements />
       <Contact />
     </div>
   );

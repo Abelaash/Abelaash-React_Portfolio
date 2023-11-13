@@ -1,4 +1,5 @@
 import React from "react";
+import META from "../assets/META.png"; // Replace with the actual path to your image
 
 const Certifications = () => {
   return (
@@ -14,23 +15,20 @@ const Certifications = () => {
             </p>
           </div>
         </div>
-            <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-                <div className="sm:text-right text-xl font-bold">
-                    <p>
-                        Meta Front-End Developer Professional Certification
-                    </p>
-                    <p>
-                        Meta
-                    </p>
-                    <p>
-                        August 2023
-                    </p>
-
-                </div>
-
-            </div>
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
+          <div className="sm:text-right text-xl font-bold">
+            <p>Meta Front-End Developer Professional Certification</p>
+            <p>Meta</p>
+            <p>August 2023</p>
+          </div>
+          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
+            {/* Add the image here */}
+            <img src={META} alt="Certification" />
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-export default Certifications
+
+export default Certifications;

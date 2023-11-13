@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/Abelaash-React_Portfolio/static/css/main.2907d44c.css",
-    "main.js": "/Abelaash-React_Portfolio/static/js/main.b1194a82.js",
+    "main.css": "/Abelaash-React_Portfolio/static/css/main.3dd9626e.css",
+    "main.js": "/Abelaash-React_Portfolio/static/js/main.34467551.js",
     "static/media/RecipeApp.png": "/Abelaash-React_Portfolio/static/media/RecipeApp.317adae332c9be80f37a.png",
     "static/media/ceya.PNG": "/Abelaash-React_Portfolio/static/media/ceya.57c5b323fbc4911be9b3.PNG",
     "static/media/workImg.PNG": "/Abelaash-React_Portfolio/static/media/workImg.e73c3ca2d528329de691.PNG",
     "static/media/MERN2.png": "/Abelaash-React_Portfolio/static/media/MERN2.53b5da81305ea353a9cd.png",
     "static/media/MovieApp.png": "/Abelaash-React_Portfolio/static/media/MovieApp.08f4df7fce90c3b69aae.png",
     "static/media/logo.png": "/Abelaash-React_Portfolio/static/media/logo.3821e0ffe5b791469273.png",
+    "static/media/META.png": "/Abelaash-React_Portfolio/static/media/META.9a841f3a45a3db62c3e6.png",
     "static/media/react.png": "/Abelaash-React_Portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/reactGame.png": "/Abelaash-React_Portfolio/static/media/reactGame.6b7cfc741b10cc4a86fa.png",
     "static/media/github.png": "/Abelaash-React_Portfolio/static/media/github.3b9e32903aa89111875d.png",
@@ -17,11 +18,11 @@
     "static/media/css.png": "/Abelaash-React_Portfolio/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/Abelaash-React_Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Abelaash-React_Portfolio/index.html",
-    "main.2907d44c.css.map": "/Abelaash-React_Portfolio/static/css/main.2907d44c.css.map",
-    "main.b1194a82.js.map": "/Abelaash-React_Portfolio/static/js/main.b1194a82.js.map"
+    "main.3dd9626e.css.map": "/Abelaash-React_Portfolio/static/css/main.3dd9626e.css.map",
+    "main.34467551.js.map": "/Abelaash-React_Portfolio/static/js/main.34467551.js.map"
   },
   "entrypoints": [
-    "static/css/main.2907d44c.css",
-    "static/js/main.b1194a82.js"
+    "static/css/main.3dd9626e.css",
+    "static/js/main.34467551.js"
   ]
 }

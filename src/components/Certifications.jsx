@@ -33,3 +33,4 @@ const Certifications = () => {
     </div>
   );
 };
+export default Certifications

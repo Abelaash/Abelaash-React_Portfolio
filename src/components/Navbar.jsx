@@ -37,6 +37,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="certifications" smooth={true} duration={500}>
+            Certifications
+          </Link>
+        </li>
+        <li>
           <Link to="education" smooth={true} duration={500}>
             Education
           </Link>
@@ -46,9 +51,10 @@ const Navbar = () => {
             Work
           </Link>
         </li>
+        
         <li>
-          <Link to="certification" smooth={true} duration={500}>
-            Professional Certifications
+          <Link to="achievements" smooth={true} duration={500}>
+            Achievements
           </Link>
         </li>
         <li>

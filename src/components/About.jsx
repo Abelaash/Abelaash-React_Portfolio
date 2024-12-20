@@ -20,7 +20,11 @@ const About = () => {
           </div>
           <div>
             <p>
-              As a Computer Programming graduate from Humber College, I'm excited to be enrolling in my second year of the Advanced Diploma in Computer Programming & Analysis program. My passion lies in developing , creating, and building web and mobile applications, and I enjoy both frontend and backend development. I also enjoy participating in extracurricular activities such as working with other developers on projects and taking part in clubs to learn about new technologies.
+            Aspiring web developer with two years of hands-on experience gained through internships.
+Demonstrated ability to design, develop, and deploy dynamic web applications using both
+frontend and backend technologies. Proficient in collaborating within agile teams, solving
+problems, and quickly learning new skills to deliver impactful solutions. Eager to apply my
+enthusiasm, skills, and growth mindset to a full-time or part-time role.
             </p>
           </div>
         </div>

@@ -16,10 +16,10 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <Education />
       <Skills />
       <Projects />
       <Certifications />
-      <Education />
       <Experience />
       <Achievements />
       <Contact />

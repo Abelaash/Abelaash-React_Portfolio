@@ -27,6 +27,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="education" smooth={true} duration={500}>
+            Education
+          </Link>
+        </li>
+        <li>
           <Link to="skills" smooth={true} duration={500}>
             Skills
           </Link>
@@ -41,11 +46,7 @@ const Navbar = () => {
             Certifications
           </Link>
         </li>
-        <li>
-          <Link to="education" smooth={true} duration={500}>
-            Education
-          </Link>
-        </li>
+       
         <li>
           <Link to="experience" smooth={true} duration={500}>
             Work
@@ -153,7 +154,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-green-700">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="../assets/resume.pdf"
+              href="./assets/resume.pdf"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>

@@ -4,7 +4,6 @@ import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import GitHub from "../assets/github.png";
 import react from "../assets/react.png";
-import Tailwind from "../assets/tailwind.png";
 import Java from "../assets/java.png";
 import MongoDB from "../assets/mongodb.png";
 import Node from "../assets/node.png";
@@ -42,10 +41,7 @@ export const Skills = () => {
                     <img className='w-20 mx-auto' src={react} alt="" />
                     <p className='my-4'>Reactjs</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Tailwind} alt="" />
-                    <p className='my-4'>TailWind CSS</p>
-                </div> 
+                
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={Java} alt=""/>
                     <p className='my-4'>Java</p>

@@ -8,8 +8,11 @@ import Java from "../assets/java.png";
 import MongoDB from "../assets/mongodb.png";
 import Node from "../assets/node.png";
 import Python from "../assets/python.png"
-
-
+import aws from "../assets/aws.png"
+import django from "../assets/django.png"
+import Docker from "../assets/docker.png"
+import express from "../assets/express.png"
+import vscode from "../assets/vscode.png"
 
 export const Skills = () => {
   return (
@@ -53,6 +56,34 @@ export const Skills = () => {
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={Python} alt=""/>
                     <p className='my-4'>Python</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={aws} alt=""/>
+                    <p className='my-4'>AWS</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={django} alt=""/>
+                    <p className='my-4'>Django</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Docker} alt=""/>
+                    <p className='my-4'>Docker</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={express} alt=""/>
+                    <p className='my-4'>Express</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Python} alt=""/>
+                    <p className='my-4'>Python</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Node} alt=""/>
+                    <p className='my-4'>Node</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={vscode} alt=""/>
+                    <p className='my-4'>VSCode</p>
                 </div>
             </div>
         </div>

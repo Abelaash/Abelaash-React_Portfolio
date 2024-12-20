@@ -15,24 +15,37 @@ const Achievements = () => {
           </div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-xl font-bold">
-            <p>Dean's Honours List Winter 2023</p>
+        <div className="sm:text-right text-xl font-bold">
+            <p>Dean's Honours List Fall 2023</p>
             <p className="pt-4 ">Humber College</p>
-            <p className="pt-4">June 2023</p>
+            <p className="pt-4">Feb.2024</p>
           </div>
           <div>
             <ul className="list-inside">
-              Awarded for students scoring 80% and above GPA
+              Awarded for students scoring 80% and above 
+              GPA: 81%
             </ul>
           </div>
           <div className="sm:text-right text-xl font-bold">
             <p>Dean's Honours List Winter 2023</p>
             <p className="pt-4 ">Humber College</p>
+            <p className="pt-4">June.2023</p>
+          </div>
+          <div>
+            <ul className="list-inside">
+              Awarded for students scoring 80% and above 
+              GPA: 91%
+            </ul>
+          </div>
+          <div className="sm:text-right text-xl font-bold">
+            <p>Dean's Honours List Winter 2022</p>
+            <p className="pt-4 ">Humber College</p>
             <p className="pt-4">June 2023</p>
           </div>
           <div>
             <ul className="list-inside">
-              Awarded for students scoring 80% and above GPA
+              Awarded for students scoring 80% and above
+              GPA: 87%
             </ul>
           </div>
         </div>

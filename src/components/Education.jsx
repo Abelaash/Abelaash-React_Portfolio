@@ -30,7 +30,7 @@ const Education = () => {
                   <div>
                       <ul className='list-inside'>
                         <li className="">
-                            Courses Taking : Application Testing, Advanced Database Programming, Newtwork & Telecommunications, Principles of Project Management, Web Application Development
+                            Dean Honour's List Fall 2023, Winter 2023 & Winter 2022
                         </li>
                         
                       </ul>

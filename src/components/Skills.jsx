@@ -4,7 +4,6 @@ import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import GitHub from "../assets/github.png";
 import react from "../assets/react.png";
-import Java from "../assets/java.png";
 import MongoDB from "../assets/mongodb.png";
 import Node from "../assets/node.png";
 import Python from "../assets/python.png"
@@ -46,10 +45,6 @@ export const Skills = () => {
                 </div>
                 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Java} alt=""/>
-                    <p className='my-4'>Java</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={MongoDB} alt=""/>
                     <p className='my-4'>MongoDB</p>
                 </div>
@@ -73,18 +68,12 @@ export const Skills = () => {
                     <img className='w-20 mx-auto' src={express} alt=""/>
                     <p className='my-4'>Express</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Python} alt=""/>
-                    <p className='my-4'>Python</p>
-                </div>
+              
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={Node} alt=""/>
                     <p className='my-4'>Node</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={vscode} alt=""/>
-                    <p className='my-4'>VSCode</p>
-                </div>
+                
             </div>
         </div>
     </div>

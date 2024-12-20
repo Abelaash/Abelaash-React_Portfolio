@@ -14,7 +14,7 @@ const Home = () => {
           I'm second year Humber College
         </h2> */}
         <p className="text-[#8892b0] py-4 max-w-[700px]">
-        Hi, my name is Abelaash, a soon-to-be graduate in Computer Programming and Analysis from Humber College, with a strong passion for software and web development. Over the past three years, I have honed my skills in creating responsive, user-friendly web applications and robust back-end systems.
+         a soon-to-be graduate in Computer Programming and Analysis from Humber College, with a strong passion for software and web development. Over the past three years, I have honed my skills in creating responsive, user-friendly web applications and robust back-end systems.
 
 With expertise in tools and technologies like React.js, Flask, Django, SQL Databases, and AWS, I bring ideas to life by crafting efficient and innovative solutions. Having completed my co-op work term and various hands-on projects, I am ready to contribute to impactful development teams.
 

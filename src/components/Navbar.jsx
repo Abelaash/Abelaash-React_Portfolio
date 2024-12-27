@@ -41,11 +41,7 @@ const Navbar = () => {
             Portfolio
           </Link>
         </li>
-        <li>
-          <Link to="certifications" smooth={true} duration={500}>
-            Certifications
-          </Link>
-        </li>
+       
        
         <li>
           <Link to="experience" smooth={true} duration={500}>

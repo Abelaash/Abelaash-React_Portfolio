@@ -4,32 +4,36 @@ import { Link } from "react-scroll";
 
 const Home = () => {
   return (
-    <div name="home" className="bg-[#0a192f] w-full h-screen">
+    <div name="home" className="w-full h-screen bg-gradient-to-r from-[#0a192f] to-[#1a1f3c]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-pink-600">Hi, I'm</p>
-        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
+        <p className="text-pink-600 text-lg">Hi, my name is</p>
+
+        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6] animate-fade-in-up">
           Abelaash Giritharan
         </h1>
-        {/* <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
-          I'm second year Humber College
-        </h2> */}
-        <p className="text-[#8892b0] py-4 max-w-[700px]">
-         a soon-to-be graduate in Computer Programming and Analysis from Humber College, with a strong passion for software and web development. Over the past three years, I have honed my skills in creating responsive, user-friendly web applications and robust back-end systems.
 
-With expertise in tools and technologies like React.js, Flask, Django, SQL Databases, and AWS, I bring ideas to life by crafting efficient and innovative solutions. Having completed my co-op work term and various hands-on projects, I am ready to contribute to impactful development teams.
+        <h2 className="text-2xl sm:text-5xl font-bold text-[#8892b0] mt-2 animate-fade-in-up delay-200">
+          Frontend Developer & Full Stack Enthusiast
+        </h2>
 
-Set to graduate in April 2024, I am actively seeking full-time opportunities where I can leverage my skills to solve real-world challenges and continue growing as a developer. Take a look at my portfolio and see how I can bring value to your next project!
+        <p className="text-[#8892b0] py-4 max-w-[700px] animate-fade-in-up delay-400">
+          A soon-to-be graduate in Computer Programming and Analysis from Humber College. I specialize in building responsive, user-friendly web apps and robust backend systems using React.js, Flask, Django, and AWS.
         </p>
-        <div>
+
+        <p className="text-[#8892b0] py-2 max-w-[700px] animate-fade-in-up delay-600">
+          I'm passionate about solving real-world problems through innovative software. I’m actively seeking full-time opportunities for 2025 and beyond — let's build something amazing!
+        </p>
+
+        <div className="mt-6">
           <Link
             to="projects"
             smooth={true}
             duration={500}
-            className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600"
+            className="group text-white border-2 px-6 py-3 my-2 flex items-center rounded-full hover:bg-pink-600 hover:border-pink-600 transition-all duration-300 ease-in-out"
           >
             View Projects
-            <span className="group-hover:rotate-90 duration-300" >
-              <HiArrowNarrowRight className="ml-3" />
+            <span className="group-hover:rotate-90 duration-300 ml-3">
+              <HiArrowNarrowRight />
             </span>
           </Link>
         </div>

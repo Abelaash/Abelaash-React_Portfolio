@@ -50,48 +50,31 @@ const Projects = () => {
           <ProjectCard
             image={ReactGame}
             title="React Game"
-            visitLink="/"
-            codeLink="/"
-          />
-
-          {/* CEYA */}
-          <ProjectCard
-            image={CEYA}
-            title="CEYA"
-            visitLink="/"
-            codeLink="/"
-          />
-
-          {/* MERN Project 1 */}
-          <ProjectCard
-            image={MERN1}
-            title="MERN Project 1"
-            visitLink="/"
-            codeLink="/"
+           
+            codeLink="https://github.com/Abelaash/TekkenReborm"
           />
 
           {/* MERN Project 2 */}
           <ProjectCard
             image={MERN2}
             title="MERN Project 2"
-            visitLink="/"
-            codeLink="/"
+           
+            codeLink="https://github.com/Abelaash/Moviestore_Project"
           />
 
           {/* Recipe App */}
           <ProjectCard
             image={Recipe}
             title="Recipe App"
-            visitLink="/"
-            codeLink="/"
+          
+            codeLink="https://github.com/Abelaash/ReactNative_FinalProject"
           />
 
           {/* Movie App (old) */}
           <ProjectCard
             image={Movie}
             title="Simple Movie App"
-            visitLink="/"
-            codeLink="/"
+            codeLink="https://github.com/Abelaash/React_Native-MovieApp-2023"
           />
 
         </div>

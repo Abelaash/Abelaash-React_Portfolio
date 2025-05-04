@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: "Home", to: "/", isRoute: true },
+    { label: "Home", id: "home"},
     { label: "About", id: "about" },
     { label: "Education", id: "education" },
     { label: "Skills", id: "skills" },
@@ -36,7 +36,7 @@ const Navbar = () => {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50">
       {/* LOGO */}
       <div>
-        <img src={Logo} alt="my logo" style={{ width: "50px" }} />
+        <img src={Logo} alt="my logo" style={{ width: "140px" }} />
       </div>
 
       {/* DESKTOP MENU */}

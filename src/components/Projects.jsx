@@ -36,28 +36,28 @@ const allProjects = [
     type: "Web",
     image: MERN2,
     title: "MERN Project 2",
-    codeLink: "#"
+    codeLink: "https://github.com/Abelaash/Moviestore_Project"
   },
   {
     category: "Past",
     type: "Mobile",
     image: Recipe,
     title: "Recipe App",
-    codeLink: "#"
+    codeLink: "https://github.com/Abelaash/ReactNative_FinalProject"
   },
   {
     category: "Past",
     type: "Web",
     image: ReactGame,
     title: "React Game",
-    codeLink: "#"
+    codeLink: "https://github.com/Abelaash/TekkenReborn"
   },
   {
     category: "Past",
     type: "Mobile",
     image: Movie,
     title: "Movie App",
-    codeLink: "#"
+    codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023"
   }
 ];
 

@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import WorkImg from "../assets/workImg.PNG";
 import ReactGame from "../assets/reactGame.png";
-import CEYA from "../assets/ceya.PNG";
-import MERN1 from "../assets/MERN1.png";
 import MERN2 from "../assets/MERN2.png";
 import Recipe from "../assets/RecipeApp.png";
 import Movie from "../assets/MovieApp.png";

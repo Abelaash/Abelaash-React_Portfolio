@@ -4,25 +4,9 @@ import MERN2 from "../assets/MERN2.png";
 import Recipe from "../assets/RecipeApp.png";
 import Movie from "../assets/MovieApp.png";
 import Capstone from "../assets/capstone.png";
-import Mystique from "../assets/mystique.jpg";
-import OudCafe from "../assets/oudcafe.png";
 import FootballManager from "../assets/footballmanager.png";
-import Egglesscakeshop from "../assets/egglesscakeshop.png"
+
 const allProjects = [
-  {
-    category: "Current WordPress Project",
-    type: "Web",
-    image: Egglesscakeshop,
-    title: "EgglessCakeShop",
-    visitLink: "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup?t=fCY9sY1besHhNmjO-0"
-  },
-   {
-    category: "Current WordPress Project",
-    type: "Web",
-    image: Egglesscakeshop,
-    title: "EgglessCakeShop",
-    visitLink: "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup?t=fCY9sY1besHhNmjO-0"
-  },
   {
     category: "Featured",
     type: "Web",
@@ -39,6 +23,14 @@ const allProjects = [
     visitLink: "/football-manager",
     codeLink: "https://github.com/Abelaash/cpan369_FootballManager"
   },
+  /*{
+    category: "Past",
+    type: "UX",
+    image: CEYA,
+    title: "CEYA UX Case Study",
+    visitLink: "#",
+    codeLink: "https://www.figma.com/file/some-link"
+  },*/
   {
     category: "Past",
     type: "Web",
@@ -66,27 +58,13 @@ const allProjects = [
     image: Movie,
     title: "Movie App",
     codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023"
-  },
-  {
-    category: "Featured",
-    type: "WordPress",
-    image: Mystique,
-    title: "Mystique Resto & Lounge",
-    visitLink: "https://mystiqueresto.com/"
-  },
-  {
-    category: "Past",
-    type: "WordPress",
-    image: OudCafe,
-    title: "Oud Cafe & Lounge",
-    visitLink: "https://oudcafelounge.com"
   }
 ];
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  const tabs = ["All", "Web", "Mobile", "WordPress"];
+  const tabs = ["All", "Web", "Mobile"];
 
   const filteredProjects =
     filter === "All"
@@ -94,7 +72,7 @@ const Projects = () => {
       : allProjects.filter((project) => project.type === filter);
 
   const showFeatured =
-    filter === "All" || filter === "Web" || filter === "UX" || filter === "WordPress";
+    filter === "All" || filter === "Web" || filter === "UX";
 
   return (
     <div id="projects" className="w-full text-gray-300 bg-[#0a192f] py-16">
@@ -120,14 +98,14 @@ const Projects = () => {
         </div>
 
         {/* Featured Projects */}
-        {showFeatured && (
+        {showFeatured ? (
           <>
             <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
               Featured Projects
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {allProjects
-                .filter((project) => project.category === "Featured" && (filter === "All" || project.type === filter))
+                .filter((project) => project.category === "Featured")
                 .map(({ image, title, visitLink, codeLink }, idx) => (
                   <div
                     key={idx}
@@ -140,14 +118,14 @@ const Projects = () => {
                       </span>
                       <div className="pt-8 text-center">
                         {visitLink && (
-                          <a href={visitLink} target="_blank" rel="noreferrer">
+                          <a href={visitLink}>
                             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                               Visit
                             </button>
                           </a>
                         )}
                         {codeLink && (
-                          <a href={codeLink} target="_blank" rel="noreferrer">
+                          <a href={codeLink}>
                             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                               Code
                             </button>
@@ -159,6 +137,10 @@ const Projects = () => {
                 ))}
             </div>
           </>
+        ) : (
+          <p className="text-lg italic text-gray-400 mt-8 mb-2">
+            No featured {filter.toLowerCase()} projects yet. Stay tuned!
+          </p>
         )}
 
         {/* Past Projects */}
@@ -180,14 +162,14 @@ const Projects = () => {
                   </span>
                   <div className="pt-8 text-center">
                     {visitLink && (
-                      <a href={visitLink} target="_blank" rel="noreferrer">
+                      <a href={visitLink}>
                         <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                           Visit
                         </button>
                       </a>
                     )}
                     {codeLink && (
-                      <a href={codeLink} target="_blank" rel="noreferrer">
+                      <a href={codeLink}>
                         <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                           Code
                         </button>

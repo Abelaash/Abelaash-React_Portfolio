@@ -13,7 +13,7 @@ import { Skills } from "./components/Skills";
 
 import CapstoneProject from "./components/CapstoneProject";
 import FootballManager from "./components/FootballManager";
-import { HashLink } from "react-router-hash-link";
+
 function App() {
   return (
     <Router>

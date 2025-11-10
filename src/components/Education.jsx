@@ -1,5 +1,5 @@
 import React from "react";
-import Humber1 from "../assets/humber.png";
+
 
 
 const Education = () => {

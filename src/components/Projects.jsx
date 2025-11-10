@@ -4,6 +4,8 @@ import MERN2 from "../assets/MERN2.png";
 import Recipe from "../assets/RecipeApp.png";
 import Movie from "../assets/MovieApp.png";
 import Capstone from "../assets/capstone.png";
+import Mystique from "../assets/mystique.jpg";
+import OudCafe from "../assets/oudcafe.png";
 import FootballManager from "../assets/footballmanager.png";
 import Egglesscakeshop from "../assets/Egglesscakeshop.png";
 import HalalStreeteatz from "../assets/HalalStreeteatz.png";
@@ -41,14 +43,6 @@ const allProjects = [
     visitLink: "/football-manager",
     codeLink: "https://github.com/Abelaash/cpan369_FootballManager",
   },
-  /*{
-    category: "Past",
-    type: "UX",
-    image: CEYA,
-    title: "CEYA UX Case Study",
-    visitLink: "#",
-    codeLink: "https://www.figma.com/file/some-link"
-  },*/
   {
     category: "Past",
     type: "Web",
@@ -75,10 +69,6 @@ const allProjects = [
     type: "Mobile",
     image: Movie,
     title: "Movie App",
-<<<<<<< HEAD
-    codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023"
-  }
-=======
     codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023",
   },
   {
@@ -95,7 +85,6 @@ const allProjects = [
     title: "Oud Cafe & Lounge",
     visitLink: "https://oudcafelounge.com",
   },
->>>>>>> 6753024 (add files)
 ];
 
 const ProjectGrid = ({ projects }) => (
@@ -133,15 +122,11 @@ const ProjectGrid = ({ projects }) => (
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  const tabs = ["All", "Web", "Mobile"];
+  const tabs = ["All", "Web", "Mobile", "WordPress"];
 
   const filteredProjects =
     filter === "All" ? allProjects : allProjects.filter((p) => p.type === filter);
 
-<<<<<<< HEAD
-  const showFeatured =
-    filter === "All" || filter === "Web" || filter === "UX";
-=======
   // Show featured unless specifically filtering to a type that would hide it
   const showFeatured = filter === "All" || filter === "Web" || filter === "WordPress";
 
@@ -156,7 +141,6 @@ const Projects = () => {
   );
 
   const pastProjects = filteredProjects.filter((p) => p.category === "Past");
->>>>>>> 6753024 (add files)
 
   return (
     <div id="projects" className="w-full text-gray-300 bg-[#0a192f] py-16">
@@ -179,47 +163,6 @@ const Projects = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* Featured Projects */}
-        {showFeatured ? (
-          <>
-            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
-              Featured Projects
-            </h3>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {allProjects
-                .filter((project) => project.category === "Featured")
-                .map(({ image, title, visitLink, codeLink }, idx) => (
-                  <div
-                    key={idx}
-                    style={{ backgroundImage: `url(${image})` }}
-                    className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-                  >
-                    <div className="opacity-0 group-hover:opacity-100">
-                      <span className="text-2xl font-bold text-white tracking-wider">
-                        {title}
-                      </span>
-                      <div className="pt-8 text-center">
-                        {visitLink && (
-                          <a href={visitLink}>
-                            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                              Visit
-                            </button>
-                          </a>
-                        )}
-                        {codeLink && (
-                          <a href={codeLink}>
-                            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                              Code
-                            </button>
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-            </div>
-=======
         {/* Current WordPress Projects */}
         {(filter === "All" || filter === "WordPress") && currentWpProjects.length > 0 && (
           <>
@@ -233,60 +176,16 @@ const Projects = () => {
           <>
             <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">Featured Projects</h3>
             <ProjectGrid projects={featuredProjects} />
->>>>>>> 6753024 (add files)
           </>
-        ) : (
-          <p className="text-lg italic text-gray-400 mt-8 mb-2">
-            No featured {filter.toLowerCase()} projects yet. Stay tuned!
-          </p>
         )}
 
         {/* Past Projects */}
-<<<<<<< HEAD
-        <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
-          Past Projects
-        </h3>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {filteredProjects
-            .filter((project) => project.category === "Past")
-            .map(({ image, title, visitLink, codeLink }, idx) => (
-              <div
-                key={idx}
-                style={{ backgroundImage: `url(${image})` }}
-                className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-              >
-                <div className="opacity-0 group-hover:opacity-100">
-                  <span className="text-2xl font-bold text-white tracking-wider">
-                    {title}
-                  </span>
-                  <div className="pt-8 text-center">
-                    {visitLink && (
-                      <a href={visitLink}>
-                        <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                          Visit
-                        </button>
-                      </a>
-                    )}
-                    {codeLink && (
-                      <a href={codeLink}>
-                        <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                          Code
-                        </button>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-        </div>
-=======
         {pastProjects.length > 0 && (
           <>
             <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">Past Projects</h3>
             <ProjectGrid projects={pastProjects} />
           </>
         )}
->>>>>>> 6753024 (add files)
       </div>
     </div>
   );

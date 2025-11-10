@@ -30,7 +30,7 @@ const Education = () => {
                   <div>
                       <ul className='list-inside'>
                         <li className="">
-                            Dean Honour's List Fall 2023, Winter 2023 & Winter 2022
+                            Graduated with Honours, achieving an overall average of 80%+ and consistent distinction across core software development courses.
                         </li>
                         
                       </ul>

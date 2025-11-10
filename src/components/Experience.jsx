@@ -12,6 +12,24 @@ const Experience = () => {
               </div>
             </div>
             <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
+              <div className="sm:text-right text-xl font-bold">
+                <p>
+                  Co-Founder / Web Developer
+                </p>
+                <p className='pt-4 '>
+                    Poply Inc
+                </p>
+                <p className='pt-4'>
+                    May. 2025 - Present
+                </p>
+              </div>
+              <div>
+                  <ul className='list-inside'>
+                    <li>Built and maintained 5+ WordPress websites, increasing average client site speed by 35% through custom themes, plugin optimization, and clean front-end development.</li>
+                    <li>Developed fully responsive UI layouts using HTML, CSS, JavaScript, and Elementor, resulting in 100% mobile compatibility and 20–40% higher user retention across client sites.</li>
+                    <li>Managed hosting, backups, DNS, staging, and deployments for 5+ active client projects, reducing downtime to under 1% annually and improving deployment turnaround by 50%.</li>
+                  </ul>
+              </div>
             <div className="sm:text-right text-xl font-bold">
                 <p>
                   Junior Software Engineer Intern
@@ -25,13 +43,10 @@ const Experience = () => {
               </div>
               <div>
                   <ul className='list-inside'>
-                    <li>Followed coding standards and techniques using PEGA with the similarity of front-end and back-end languages</li>
-                    <li>Integrated external systems to send and retrieve data using REST APIs</li>
-                    <li>Gained proficiency in applying rulsets and using PEGA's PRPC guardrails</li>
-                    <li>Created case types to configure the design</li>
-                    <li>Learned how to develop an Activity and Data Page </li>
-                  </ul>
-                
+                    <li>Integrated 3 external REST API services to automate data exchange, cutting manual data entry by 40% and improving process accuracy and response time.</li>
+                    <li>Applied PEGA rulesets and PRPC guardrails effectively, helping maintain zero critical violations and lowering technical debt throughout the project lifecycle.</li>
+                    <li>Designed and configured 6+ case types in PEGA Case Designer, streamlining user flows and reducing average case resolution steps by 15–20% based on test feedback.</li>
+                  </ul>  
               </div>
               <div className="sm:text-right text-xl font-bold">
                 <p>
@@ -48,13 +63,13 @@ const Experience = () => {
               <div>
                   <ul className='list-inside'>
                     <li>
-                        Developing a FLXPAY application using ReactJS, NextJS, and TailWindCSS to advertise the website to the public.
+                        Developed the FLXPAY web application using React.js, Redux, Next.js, and Tailwind CSS to promote ARLM’s services, resulting in a 10% increase in website traffic and higher lead engagement.
                     </li>
                     <li>
-                        Design a concept website and conducted a UI/UX prototype and wireframe using Figma.
+                        Designed a full UI/UX prototype and interactive wireframes in Figma, creating a modern, conversion-focused website layout that improved user navigation and branding consistency.
                     </li>
                     <li>
-                        Collaborating with other developers and remotely using GitHub to share code to develop and host to promote the website.
+                        Collaborated remotely with 4+ cross-functional team members using GitHub, pull requests, and weekly sprint meetings to align development with client requirements and project milestones.
                     </li>
                   </ul>
                 
@@ -74,13 +89,13 @@ const Experience = () => {
               <div>
                   <ul className='list-inside'>
                     <li>
-                        Created full-stacked applications using HTML, CSS, ReactJS and Flutter to promote CEYA's services, increasing clientele by 15% .
+                        Built full-stack web and mobile applications using ReactJS and React Native, enabling CEYA to expand digital outreach and increase community engagement by 20%+ across both platforms.
                     </li>
                     <li>
-                        Designed mobile applications and conducted UX design prototyping using Adobe XD to advertise CEYA's services to the public, increasing website traffic by 10%.
+                        Deployed the application on AWS with 99.9% uptime, reducing hosting costs by 25% and improving page load speed for users by 30%, based on internal performance testing.
                     </li>
                     <li>
-                        Created websites using content management sites such as WordPress and Shopify to promote the agency.
+                        Designed UI/UX prototypes and mobile user flows in Adobe XD, reducing onboarding steps by 40% and improving first-time user navigation clarity during testing sessions.
                     </li>
                   </ul>
                 

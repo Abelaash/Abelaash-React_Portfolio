@@ -5,8 +5,22 @@ import Recipe from "../assets/RecipeApp.png";
 import Movie from "../assets/MovieApp.png";
 import Capstone from "../assets/capstone.png";
 import FootballManager from "../assets/footballmanager.png";
-
+import Egglesscakeshop from "../assets/egglesscakeshop.png"
 const allProjects = [
+  {
+    category: "Current WordPress Project",
+    type: "Web",
+    image: Egglesscakeshop,
+    title: "EgglessCakeShop",
+    visitLink: "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup?t=fCY9sY1besHhNmjO-0"
+  },
+   {
+    category: "Current WordPress Project",
+    type: "Web",
+    image: Egglesscakeshop,
+    title: "EgglessCakeShop",
+    visitLink: "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup?t=fCY9sY1besHhNmjO-0"
+  },
   {
     category: "Featured",
     type: "Web",

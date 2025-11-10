@@ -13,7 +13,7 @@ const Home = () => {
         </h1>
 
         <p className="text-[#8892b0] py-4 max-w-[700px] animate-fade-in-up delay-400">
-          A soon-to-be graduate in Computer Programming and Analysis from Humber College. I specialize in building responsive, user-friendly web apps and robust backend systems using React.js, Flask, Django, and AWS.
+          Recent graduate in Computer Programming & Analysis program at Humber Polytechnic. I specialize in building responsive, user-friendly web apps and robust backend systems using React.js, Flask, Django, and AWS.
         </p>
 
         <p className="text-[#8892b0] py-2 max-w-[700px] animate-fade-in-up delay-600">

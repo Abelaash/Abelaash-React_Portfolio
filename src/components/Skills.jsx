@@ -27,7 +27,7 @@ import Elementor from "../assets/elementor.png";
 import Git from "../assets/git.png";
 import IntelliJ from "../assets/intellij.png";
 import PyCharm from "../assets/pycharm.png";
-
+import Vercel from "../assets/vercel.jpg"
 import XAMPP from "../assets/xampp.png";
 export const Skills = () => {
   
@@ -90,6 +90,7 @@ export const Skills = () => {
       { name: "XAMPP", icon: XAMPP },
       { name: "PyCharm", icon: PyCharm },
       { name: "IntelliJ IDEA", icon: IntelliJ },
+      { name: "Vercel", icon: Vercel},
     ],
   },
 ];

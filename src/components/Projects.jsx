@@ -9,24 +9,52 @@ import OudCafe from "../assets/oudcafe.png";
 import FootballManager from "../assets/footballmanager.png";
 import Egglesscakeshop from "../assets/Egglesscakeshop.png";
 import HalalStreeteatz from "../assets/HalalStreeteatz.png";
+import HalalStreetEatzWeb from "../assets/HalalStreetEatzWeb.png"
 
 const allProjects = [
+  // ⭐ Figma Projects
   {
-    category: "Current WordPress Project",
-    type: "WordPress",
+    category: "Figma Project",
+    type: "Figma",
     image: Egglesscakeshop,
-    title: "EgglessCakeShop",
+    title: "EgglessCakeShop (Figma)",
     visitLink:
-      "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup?node-id=0-1&p=f&t=mqg1p51PZFDP4LJ9-0",
+      "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup?node-id=0-1&p=f",
   },
   {
-    category: "Current WordPress Project",
-    type: "WordPress",
+    category: "Figma Project",
+    type: "Figma",
     image: HalalStreeteatz,
+    title: "HalalStreetEatz (Figma)",
+    visitLink:
+      "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ?node-id=0-1&p=f",
+  },
+
+  // ⭐ WordPress Projects
+   {
+    category: "WordPress Project",
+    type: "WordPress",
+    image: HalalStreetEatzWeb,
     title: "HalalStreetEatz",
     visitLink:
-      "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ?node-id=0-1&p=f&t=IuQp510dohucOYcm-0",
+      "https://halalstreeteatz.com/",
   },
+  {
+    category: "WordPress Project",
+    type: "WordPress",
+    image: Mystique,
+    title: "Mystique Resto & Lounge",
+    visitLink: "https://mystiqueresto.com/",
+  },
+  {
+    category: "Past",
+    type: "WordPress",
+    image: OudCafe,
+    title: "Oud Cafe & Lounge",
+    visitLink: "https://oudcafelounge.com",
+  },
+
+  // ⭐ Featured Projects
   {
     category: "Featured",
     type: "Web",
@@ -43,6 +71,8 @@ const allProjects = [
     visitLink: "/football-manager",
     codeLink: "https://github.com/Abelaash/cpan369_FootballManager",
   },
+
+  // ⭐ Past Projects
   {
     category: "Past",
     type: "Web",
@@ -71,20 +101,6 @@ const allProjects = [
     title: "Movie App",
     codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023",
   },
-  {
-    category: "Featured",
-    type: "WordPress",
-    image: Mystique,
-    title: "Mystique Resto & Lounge",
-    visitLink: "https://mystiqueresto.com/",
-  },
-  {
-    category: "Past",
-    type: "WordPress",
-    image: OudCafe,
-    title: "Oud Cafe & Lounge",
-    visitLink: "https://oudcafelounge.com",
-  },
 ];
 
 const ProjectGrid = ({ projects }) => (
@@ -96,7 +112,10 @@ const ProjectGrid = ({ projects }) => (
         className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div bg-cover bg-center min-h-[200px]"
       >
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          <span className="text-2xl font-bold text-white tracking-wider">{title}</span>
+          <span className="text-2xl font-bold text-white tracking-wider">
+            {title}
+          </span>
+
           <div className="pt-8 text-center">
             {visitLink && (
               <a href={visitLink} target="_blank" rel="noreferrer">
@@ -105,6 +124,7 @@ const ProjectGrid = ({ projects }) => (
                 </button>
               </a>
             )}
+
             {codeLink && (
               <a href={codeLink} target="_blank" rel="noreferrer">
                 <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
@@ -122,17 +142,25 @@ const ProjectGrid = ({ projects }) => (
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  const tabs = ["All", "Web", "Mobile", "WordPress"];
+  // ⭐ Add Figma to tabs
+  const tabs = ["All", "Web", "Mobile", "WordPress", "Figma"];
 
+  // Category filters
   const filteredProjects =
     filter === "All" ? allProjects : allProjects.filter((p) => p.type === filter);
 
-  // Show featured unless specifically filtering to a type that would hide it
-  const showFeatured = filter === "All" || filter === "Web" || filter === "WordPress";
+  const showFeatured =
+    filter === "All" || filter === "Web" || filter === "WordPress" || filter === "Figma";
 
   const currentWpProjects = allProjects.filter(
     (p) =>
-      p.category === "Current WordPress Project" &&
+      p.category === "WordPress Project" &&
+      (filter === "All" || p.type === filter)
+  );
+
+  const figmaProjects = allProjects.filter(
+    (p) =>
+      p.category === "Figma Project" &&
       (filter === "All" || p.type === filter)
   );
 
@@ -145,7 +173,10 @@ const Projects = () => {
   return (
     <div id="projects" className="w-full text-gray-300 bg-[#0a192f] py-16">
       <div className="max-w-[1000px] mx-auto p-4">
-        <h2 className="text-4xl font-bold border-b-4 inline border-pink-600">Portfolio</h2>
+        
+        <h2 className="text-4xl font-bold border-b-4 inline border-pink-600">
+          Portfolio
+        </h2>
         <p className="py-4">Check out some of my recent work</p>
 
         {/* Tabs */}
@@ -155,7 +186,9 @@ const Projects = () => {
               key={tab}
               onClick={() => setFilter(tab)}
               className={`px-4 py-2 rounded transition-colors duration-150 ${
-                filter === tab ? "bg-pink-600 text-white" : "bg-gray-700 hover:bg-gray-600"
+                filter === tab
+                  ? "bg-pink-600 text-white"
+                  : "bg-gray-700 hover:bg-gray-600"
               }`}
             >
               {tab}
@@ -163,26 +196,44 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Current WordPress Projects */}
-        {(filter === "All" || filter === "WordPress") && currentWpProjects.length > 0 && (
-          <>
-            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">Current WordPress Projects</h3>
-            <ProjectGrid projects={currentWpProjects} />
-          </>
-        )}
+        {/* ⭐ WordPress Projects */}
+        {(filter === "All" || filter === "WordPress") &&
+          currentWpProjects.length > 0 && (
+            <>
+              <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
+                WordPress Projects
+              </h3>
+              <ProjectGrid projects={currentWpProjects} />
+            </>
+          )}
 
-        {/* Featured Projects */}
+        {/* ⭐ Figma Projects */}
+        {(filter === "All" || filter === "Figma") &&
+          figmaProjects.length > 0 && (
+            <>
+              <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
+                Figma Projects
+              </h3>
+              <ProjectGrid projects={figmaProjects} />
+            </>
+          )}
+
+        {/* ⭐ Featured */}
         {showFeatured && featuredProjects.length > 0 && (
           <>
-            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">Featured Projects</h3>
+            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
+              Featured Projects
+            </h3>
             <ProjectGrid projects={featuredProjects} />
           </>
         )}
 
-        {/* Past Projects */}
+        {/* ⭐ Past */}
         {pastProjects.length > 0 && (
           <>
-            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">Past Projects</h3>
+            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
+              Past Projects
+            </h3>
             <ProjectGrid projects={pastProjects} />
           </>
         )}

@@ -1,98 +1,131 @@
-import React from 'react';
+import React from "react";
+
+// Import icons
 import HTML from "../assets/html.png";
 import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import GitHub from "../assets/github.png";
-import react from "../assets/react.png";
+import ReactLogo from "../assets/react.png";
 import MongoDB from "../assets/mongodb.png";
 import Node from "../assets/node.png";
-import java from "../assets/java.png";
+import Java from "../assets/java.png";
 import Python from "../assets/python.png";
-import aws from "../assets/aws.png";
-import django from "../assets/django.png";
+import AWS from "../assets/aws.png";
+import DjangoLogo from "../assets/django.png";
 import Docker from "../assets/docker.png";
-import express from "../assets/express.png";
-import vscode from "../assets/vscode.png";
-import wordpress from "../assets/wordpress.png";
-import shopify from "../assets/shopify.png";
+import Express from "../assets/express.png";
+import VSCode from "../assets/vscode.png";
+import WordPress from "../assets/wordpress.png";
+import Shopify from "../assets/shopify.png";
 
+// New icons
+import Figma from "../assets/figma.png";
+import React_Native from "../assets/react_native.png";
+import PHP from "../assets/php.png";
+import MySQL from "../assets/mysql.png";
+import Elementor from "../assets/elementor.png";
+import Git from "../assets/git.png";
+import IntelliJ from "../assets/intellij.png";
+import PyCharm from "../assets/pycharm.png";
 
+import XAMPP from "../assets/xampp.png";
 export const Skills = () => {
+  
+  const categories = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "HTML", icon: HTML },
+      { name: "CSS", icon: CSS },
+      { name: "JavaScript", icon: JavaScript },
+      { name: "React", icon: ReactLogo },
+      { name: "React Native", icon: React_Native },
+    ],
+  },
+
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node", icon: Node },
+      { name: "Express", icon: Express },
+      { name: "Python", icon: Python },
+      { name: "Django", icon: DjangoLogo },
+      { name: "Java", icon: Java },
+      { name: "PHP", icon: PHP },
+    ],
+  },
+
+  {
+    title: "Database / Cloud",
+    skills: [
+      { name: "MongoDB", icon: MongoDB },
+      { name: "MySQL", icon: MySQL },
+      { name: "AWS", icon: AWS },
+      { name: "Docker", icon: Docker },
+    ],
+  },
+
+  {
+    title: "CMS / Platforms",
+    skills: [
+      { name: "WordPress", icon: WordPress },
+      { name: "Shopify", icon: Shopify },
+      { name: "Elementor", icon: Elementor },
+    ],
+  },
+
+  {
+    title: "Design / UI",
+    skills: [
+      { name: "Figma", icon: Figma },
+    ],
+  },
+
+  {
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: Git },
+      { name: "GitHub", icon: GitHub },
+      { name: "VSCode", icon: VSCode },
+      { name: "XAMPP", icon: XAMPP },
+      { name: "PyCharm", icon: PyCharm },
+      { name: "IntelliJ IDEA", icon: IntelliJ },
+    ],
+  },
+];
   return (
-    <div id="skills" className="w-full h-[125vh] bg-[#0a192f] text-gray-300">
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+    <div id="skills" className="w-full min-h-screen bg-[#0a192f] text-gray-300">
+      <div className="max-w-[1000px] mx-auto px-4 py-12">
+        
         <div>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600'>Skills</p>
-          <p className='py-4'>These are my skills that I've worked with</p>
+          <p className="text-4xl font-bold inline border-b-4 border-pink-600">
+            Skills
+          </p>
+          <p className="py-4">Technologies & tools I work with</p>
         </div>
 
-        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={HTML} alt="HTML ICON" />
-            <p className='my-4'>HTML</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={CSS} alt="CSS ICON" />
-            <p className='my-4'>CSS</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={JavaScript} alt="JavaScript ICON" />
-            <p className='my-4'>JavaScript</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={GitHub} alt="GitHub ICON" />
-            <p className='my-4'>GitHub</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={react} alt="React ICON" />
-            <p className='my-4'>Reactjs</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={MongoDB} alt="MongoDB ICON" />
-            <p className='my-4'>MongoDB</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Python} alt="Python ICON" />
-            <p className='my-4'>Python</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={java} alt="Shopify ICON" />
-            <p className='my-4'>Java</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={aws} alt="AWS ICON" />
-            <p className='my-4'>AWS</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={django} alt="Django ICON" />
-            <p className='my-4'>Django</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Docker} alt="Docker ICON" />
-            <p className='my-4'>Docker</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={express} alt="Express ICON" />
-            <p className='my-4'>Express</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Node} alt="Node ICON" />
-            <p className='my-4'>Node</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={wordpress} alt="Wordpress ICON" />
-            <p className='my-4'>WordPress</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={shopify} alt="Shopify ICON" />
-            <p className='my-4'>Shopify</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={vscode} alt="Shopify ICON" />
-            <p className='my-4'>VSCode</p>
-          </div>
+        <div className="flex flex-col gap-10 mt-6">
+          {categories.map((category, index) => (
+            <div key={index}>
+              <h3 className="text-2xl font-semibold mb-4 text-pink-400">
+                {category.title}
+              </h3>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+                {category.skills.map((skill, i) => (
+                  <div
+                    key={i}
+                    className="p-4 shadow-md shadow-[#040c16] hover:scale-110 duration-500 rounded-lg"
+                  >
+                    <img className="w-20 mx-auto" src={skill.icon} alt={skill.name} />
+                    <p className="mt-3">{skill.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </div>
   );

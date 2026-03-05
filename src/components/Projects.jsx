@@ -13,6 +13,10 @@ import HalalStreeteatz from "../assets/HalalStreeteatz.png";
 import HalalStreetEatzWeb from "../assets/HalalStreetEatzWeb.png";
 import HigginsAromar from "../assets/HigginsAromar.png";
 
+// ✅ NEW
+import StopMarketing from "../assets/StopMarketing.png";
+import UplyftedMarketingAgency from "../assets/UplyftedMarketingAgency.png";
+
 const allProjects = [
   // ⭐ Figma Projects
   {
@@ -36,6 +40,20 @@ const allProjects = [
   {
     category: "WordPress Project",
     type: "WordPress",
+    image: UplyftedMarketingAgency,
+    title: "Uplyfted Marketing Agency (UMA)",
+    visitLink: "https://uplyftedmarketing.agency/",
+  },
+  {
+    category: "WordPress Project",
+    type: "WordPress",
+    image: StopMarketing,
+    title: "StopMarketing",
+    visitLink: "https://stopmarketing.ag/",
+  },
+  {
+    category: "WordPress Project",
+    type: "WordPress",
     image: HalalStreetEatzWeb,
     title: "HalalStreetEatz",
     visitLink: "https://halalstreeteatz.com/",
@@ -55,7 +73,7 @@ const allProjects = [
     visitLink: "https://oudcafelounge.com",
   },
 
-  
+  // ⭐ Shopify Projects
   {
     category: "Shopify Projects",
     type: "Shopify",
@@ -110,7 +128,6 @@ const allProjects = [
     image: Movie,
     title: "Movie App",
     codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023",
-    visitLink: undefined,
   },
 ];
 
@@ -155,11 +172,9 @@ const Projects = () => {
 
   const tabs = ["All", "Web", "Mobile", "WordPress", "Shopify", "Figma"];
 
-  // Filter by type (tab)
   const filteredProjects =
     filter === "All" ? allProjects : allProjects.filter((p) => p.type === filter);
 
-  // Section datasets
   const currentWpProjects = allProjects.filter(
     (p) =>
       p.category === "WordPress Project" &&
@@ -184,7 +199,6 @@ const Projects = () => {
 
   const pastProjects = filteredProjects.filter((p) => p.category === "Past");
 
-  // Only show Featured when it makes sense
   const showFeatured =
     filter === "All" ||
     filter === "Web" ||
@@ -238,7 +252,7 @@ const Projects = () => {
           </>
         )}
 
-        {/* Shopify Projects */}
+        {/* ⭐ Shopify Projects */}
         {(filter === "All" || filter === "Shopify") &&
           shopifyProjects.length > 0 && (
             <>

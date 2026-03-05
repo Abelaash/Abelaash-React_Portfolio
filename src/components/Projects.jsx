@@ -12,8 +12,6 @@ import Egglesscakeshop from "../assets/Egglesscakeshop.png";
 import HalalStreeteatz from "../assets/HalalStreeteatz.png";
 import HalalStreetEatzWeb from "../assets/HalalStreetEatzWeb.png";
 import HigginsAromar from "../assets/HigginsAromar.png";
-
-// ✅ NEW
 import StopMarketing from "../assets/StopMarketing.png";
 import UplyftedMarketingAgency from "../assets/UplyftedMarketingAgency.png";
 
@@ -139,12 +137,13 @@ const ProjectGrid = ({ projects }) => (
         style={{ backgroundImage: `url(${image})` }}
         className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div bg-cover bg-center min-h-[200px]"
       >
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          <span className="text-2xl font-bold text-white tracking-wider">
+        {/* ✅ CENTERED overlay content */}
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-center items-center text-center h-full w-full">
+          <span className="text-2xl font-bold text-white tracking-wider text-center px-4">
             {title}
           </span>
 
-          <div className="pt-8 text-center">
+          <div className="pt-6 text-center">
             {visitLink && (
               <a href={visitLink} target="_blank" rel="noreferrer">
                 <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
@@ -172,9 +171,13 @@ const Projects = () => {
 
   const tabs = ["All", "Web", "Mobile", "WordPress", "Shopify", "Figma"];
 
+  // Filter by type (tab)
   const filteredProjects =
-    filter === "All" ? allProjects : allProjects.filter((p) => p.type === filter);
+    filter === "All"
+      ? allProjects
+      : allProjects.filter((p) => p.type === filter);
 
+  // Section datasets
   const currentWpProjects = allProjects.filter(
     (p) =>
       p.category === "WordPress Project" &&

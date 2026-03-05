@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import ReactGame from "../assets/reactGame.png";
 import MERN2 from "../assets/MERN2.png";
 import Recipe from "../assets/RecipeApp.png";
@@ -6,10 +7,14 @@ import Movie from "../assets/MovieApp.png";
 import Capstone from "../assets/capstone.png";
 import Mystique from "../assets/mystique.jpg";
 import OudCafe from "../assets/oudcafe.png";
+import HigginsAromar from "../assets/HigginsAromar.png";
 import FootballManager from "../assets/footballmanager.png";
 import Egglesscakeshop from "../assets/Egglesscakeshop.png";
 import HalalStreeteatz from "../assets/HalalStreeteatz.png";
-import HalalStreetEatzWeb from "../assets/HalalStreetEatzWeb.png"
+import HalalStreetEatzWeb from "../assets/HalalStreetEatzWeb.png";
+
+// ✅ ADD THIS (make sure the filename/path matches your assets folder)
+import HigginsAromar from "../assets/HigginsAromar.png";
 
 const allProjects = [
   // ⭐ Figma Projects
@@ -31,13 +36,12 @@ const allProjects = [
   },
 
   // ⭐ WordPress Projects
-   {
+  {
     category: "WordPress Project",
     type: "WordPress",
     image: HalalStreetEatzWeb,
     title: "HalalStreetEatz",
-    visitLink:
-      "https://halalstreeteatz.com/",
+    visitLink: "https://halalstreeteatz.com/",
   },
   {
     category: "WordPress Project",
@@ -52,6 +56,15 @@ const allProjects = [
     image: OudCafe,
     title: "Oud Cafe & Lounge",
     visitLink: "https://oudcafelounge.com",
+  },
+
+  // ✅ Shopify Projects (now properly included + has image import)
+  {
+    category: "Shopify Projects",
+    type: "Shopify",
+    image: HigginsAromar,
+    title: "Higgins Aromar",
+    visitLink: "https://higginsaromar.com/",
   },
 
   // ⭐ Featured Projects
@@ -100,6 +113,7 @@ const allProjects = [
     image: Movie,
     title: "Movie App",
     codeLink: "https://github.com/Abelaash/React_Native-MovieApp-2023",
+    visitLink: undefined,
   },
 ];
 
@@ -142,16 +156,13 @@ const ProjectGrid = ({ projects }) => (
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  // ⭐ Add Figma to tabs
-  const tabs = ["All", "Web", "Mobile", "WordPress", "Figma"];
+  const tabs = ["All", "Web", "Mobile", "WordPress", "Shopify", "Figma"];
 
-  // Category filters
+  // Filter by type (tab)
   const filteredProjects =
     filter === "All" ? allProjects : allProjects.filter((p) => p.type === filter);
 
-  const showFeatured =
-    filter === "All" || filter === "Web" || filter === "WordPress" || filter === "Figma";
-
+  // Section datasets
   const currentWpProjects = allProjects.filter(
     (p) =>
       p.category === "WordPress Project" &&
@@ -164,16 +175,29 @@ const Projects = () => {
       (filter === "All" || p.type === filter)
   );
 
+  const shopifyProjects = allProjects.filter(
+    (p) =>
+      p.category === "Shopify Projects" &&
+      (filter === "All" || p.type === filter)
+  );
+
   const featuredProjects = allProjects.filter(
     (p) => p.category === "Featured" && (filter === "All" || p.type === filter)
   );
 
   const pastProjects = filteredProjects.filter((p) => p.category === "Past");
 
+  // Only show Featured when it makes sense
+  const showFeatured =
+    filter === "All" ||
+    filter === "Web" ||
+    filter === "WordPress" ||
+    filter === "Figma" ||
+    filter === "Shopify";
+
   return (
     <div id="projects" className="w-full text-gray-300 bg-[#0a192f] py-16">
       <div className="max-w-[1000px] mx-auto p-4">
-        
         <h2 className="text-4xl font-bold border-b-4 inline border-pink-600">
           Portfolio
         </h2>
@@ -208,13 +232,23 @@ const Projects = () => {
           )}
 
         {/* ⭐ Figma Projects */}
-        {(filter === "All" || filter === "Figma") &&
-          figmaProjects.length > 0 && (
+        {(filter === "All" || filter === "Figma") && figmaProjects.length > 0 && (
+          <>
+            <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
+              Figma Projects
+            </h3>
+            <ProjectGrid projects={figmaProjects} />
+          </>
+        )}
+
+        {/* Shopify Projects */}
+        {(filter === "All" || filter === "Shopify") &&
+          shopifyProjects.length > 0 && (
             <>
               <h3 className="text-2xl font-semibold text-pink-500 mt-8 mb-2">
-                Figma Projects
+                Shopify Projects
               </h3>
-              <ProjectGrid projects={figmaProjects} />
+              <ProjectGrid projects={shopifyProjects} />
             </>
           )}
 

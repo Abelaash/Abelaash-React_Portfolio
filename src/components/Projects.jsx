@@ -7,13 +7,10 @@ import Movie from "../assets/MovieApp.png";
 import Capstone from "../assets/capstone.png";
 import Mystique from "../assets/mystique.jpg";
 import OudCafe from "../assets/oudcafe.png";
-import HigginsAromar from "../assets/HigginsAromar.png";
 import FootballManager from "../assets/footballmanager.png";
 import Egglesscakeshop from "../assets/Egglesscakeshop.png";
 import HalalStreeteatz from "../assets/HalalStreeteatz.png";
 import HalalStreetEatzWeb from "../assets/HalalStreetEatzWeb.png";
-
-// ✅ ADD THIS (make sure the filename/path matches your assets folder)
 import HigginsAromar from "../assets/HigginsAromar.png";
 
 const allProjects = [
@@ -58,7 +55,7 @@ const allProjects = [
     visitLink: "https://oudcafelounge.com",
   },
 
-  // ✅ Shopify Projects (now properly included + has image import)
+  
   {
     category: "Shopify Projects",
     type: "Shopify",

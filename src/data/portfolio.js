@@ -1,13 +1,18 @@
-// Single source of truth for all portfolio content.
-// To add a published Webflow project: set `img` to your screenshot path and `link` to the live URL.
+import canopy from "../assets/canopy.png";
+import arktis from "../assets/arktis.png";
+import clearpath from "../assets/clearpath";
+import fjordkraft from "../assets/fjorddkraft";
+import lys from "../assets/lys";
+import laurel from "../assets/laurel";
+
 
 export const work = [
-  { n: "01", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Sustainable architecture studio — Toronto.", tags: ["Webflow", "Brand", "🇨🇦"], img: null, link: null },
-  { n: "02", t: "Arktis", y: "'26", cat: "Webflow", desc: "Premium Norwegian cold-brew coffee brand.", tags: ["Webflow", "E-comm", "🇳🇴"], img: null, link: null },
-  { n: "03", t: "The Laurel", y: "'26", cat: "Webflow", desc: "Canadian culture & design editorial journal.", tags: ["Webflow", "Editorial", "🇨🇦"], img: null, link: null },
-  { n: "04", t: "Lys", y: "'26", cat: "Webflow", desc: "Contemporary art exhibition in Tromsø.", tags: ["Webflow", "Culture", "🇳🇴"], img: null, link: null },
-  { n: "05", t: "Fjordkraft Gear", y: "'26", cat: "Webflow", desc: "Norwegian outdoor gear brand.", tags: ["Webflow", "Brand", "🇳🇴"], img: null, link: null },
-  { n: "06", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Vancouver AI productivity SaaS.", tags: ["Webflow", "SaaS", "🇨🇦"], img: null, link: null },
+  { n: "01", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Sustainable architecture studio — Toronto.", tags: ["Webflow", "Brand", "🇨🇦"], img: canopy, link: null },
+  { n: "02", t: "Arktis", y: "'26", cat: "Webflow", desc: "Premium Norwegian cold-brew coffee brand.", tags: ["Webflow", "E-comm", "🇳🇴"], img: arktis, link: null },
+  { n: "03", t: "The Laurel", y: "'26", cat: "Webflow", desc: "Canadian culture & design editorial journal.", tags: ["Webflow", "Editorial", "🇨🇦"], img: laurel, link: null },
+  { n: "04", t: "Lys", y: "'26", cat: "Webflow", desc: "Contemporary art exhibition in Tromsø.", tags: ["Webflow", "Culture", "🇳🇴"], img: lys, link: null },
+  { n: "05", t: "Fjordkraft Gear", y: "'26", cat: "Webflow", desc: "Norwegian outdoor gear brand.", tags: ["Webflow", "Brand", "🇳🇴"], img: fjordkraft, link: null },
+  { n: "06", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Vancouver AI productivity SaaS.", tags: ["Webflow", "SaaS", "🇨🇦"], img: clearpath, link: null },
   { n: "07", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: null, link: "https://stopmarketing.ag/" },
   { n: "08", t: "Uplyfted Marketing", y: "'25", cat: "WordPress", desc: "Full marketing agency website build.", tags: ["WordPress", "Agency"], img: null, link: "https://uplyftedmarketing.agency/" },
   { n: "09", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Hospitality"], img: null, link: "https://mystiqueresto.com/" },

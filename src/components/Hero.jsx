@@ -28,8 +28,8 @@ const Hero = () => {
           </p>
         </div>
         <div className="cta-row">
-          <a className="cta cta-fill" onClick={() => go("work")}>Selected Work →</a>
-          <a className="cta cta-out" onClick={() => go("contact")}>Get in touch</a>
+          <button className="cta cta-fill" onClick={() => go("work")}>Selected Work →</button>
+          <button className="cta cta-out" onClick={() => go("contact")}>Get in touch</button>
         </div>
       </div>
 

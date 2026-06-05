@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const links = [
-  { label: "About", id: "about" },
   { label: "Work", id: "work" },
+  { label: "About", id: "about" },
   { label: "Experience", id: "experience" },
   { label: "Contact", id: "contact" },
 ];
@@ -29,10 +29,10 @@ const Navbar = () => {
   return (
     <>
       <nav className="nav">
-        <div className="brand" onClick={() => go("home")} style={{ cursor: "pointer" }}>ABELAASH G.</div>
+        <button className="brand brand-btn" onClick={() => go("home")}>ABELAASH G.</button>
         <ul className="navlinks">
           {links.map((l) => (
-            <li key={l.id}><a onClick={() => go(l.id)}>{l.label}</a></li>
+            <li key={l.id}><button className="navlink-btn" onClick={() => go(l.id)}>{l.label}</button></li>
           ))}
         </ul>
         <div className="clock">{clock}</div>
@@ -42,7 +42,7 @@ const Navbar = () => {
       {open && (
         <div className="mobile-menu">
           {links.map((l) => (
-            <span key={l.id} onClick={() => go(l.id)}>{l.label}</span>
+            <button key={l.id} className="mobile-link-btn" onClick={() => go(l.id)}>{l.label}</button>
           ))}
         </div>
       )}

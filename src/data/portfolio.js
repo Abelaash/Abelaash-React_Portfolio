@@ -20,7 +20,7 @@ export const work = [
   { n: "06", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Vancouver AI productivity SaaS.", tags: ["Webflow", "SaaS", "🇨🇦"], img: clearpath, link: null },
 
   { n: "07", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: StopMarketing, link: "https://stopmarketing.ag/" },
-  { n: "08", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Hospitality"], img: mystiqueresto, link: "https://mystiqueresto.com/" },
+  { n: "08", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Restaurant"], img: mystiqueresto, link: "https://mystiqueresto.com/" },
   { n: "09", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "Restaurant"], img: halalstreetWeb, link: "https://halalstreeteatz.com/" },
 
   // ── Figma mockups — paste your Figma share links into `link` when ready ──

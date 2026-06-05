@@ -9,6 +9,7 @@ import halalstreeteatz from "../assets/HalalStreeteatz.png";
 import mystiqueresto from "../assets/mystique.jpg";
 import movie from "../assets/capstone.png";
 import footballmanager from "../assets/footballmanager.png";
+import halalstreetWeb from "../assets/HalalStreetEatzWeb.png";
 
 export const work = [
   { n: "01", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Sustainable architecture studio — Toronto.", tags: ["Webflow", "Brand", "🇨🇦"], img: canopy, link: null },
@@ -23,7 +24,7 @@ export const work = [
   { n: "09", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "F&B"], img: halalstreeteatz, link: "https://halalstreeteatz.com/" },
 
   // ── Figma mockups — paste your Figma share links into `link` when ready ──
-  { n: "11", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Mobile app mockup for a street-food brand.", tags: ["Figma", "Mobile"], img: null, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ" },
+  { n: "11", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Mobile app mockup for a street-food brand.", tags: ["Figma", "Mobile"], img: halalstreetWeb, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ" },
 
   { n: "12", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject" },
   { n: "13", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager" },

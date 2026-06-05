@@ -1,36 +1,27 @@
 import React from "react";
+import { Reveal, Eyebrow } from "./Reveal";
 
-const About = () => {
-  return (
-    <div id="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-pink-600">
-              About
-            </p>
-          </div>
+const About = () => (
+  <section className="block" id="about">
+    <div className="wrap">
+      <Eyebrow num="(01)">What I do</Eyebrow>
+      <Reveal as="p" className="statement">
+        I sit at the rare intersection of <span className="serif-i">design</span>, <span className="serif-i">development</span> and <span className="serif-i">marketing</span> — <span className="dim">so the things I build don't just look sharp, they move the numbers that matter.</span>
+      </Reveal>
+      <Reveal className="two" delay={0.1}>
+        <div>
+          <p className="body-muted">
+            I'm a Humber College Computer Programming & Analysis graduate based in Brampton, Ontario. I build responsive, conversion-focused websites and pair them with the marketing strategy to make them work.
+          </p>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl font-bold">
-            <p>
-              Hi, I'm Abelaash, nice to meet you. Please take a look at my
-              portfolio website.
-            </p>
-          </div>
-          <div>
-            <p>
-            Aspiring web developer with two years of hands-on experience gained through internships.
-Demonstrated ability to design, develop, and deploy dynamic web applications using both
-frontend and backend technologies. Proficient in collaborating within agile teams, solving
-problems, and quickly learning new skills to deliver impactful solutions. Eager to apply my
-enthusiasm, skills, and growth mindset to a full-time or part-time role.
-            </p>
-          </div>
+        <div>
+          <p className="body-muted">
+            Currently a Digital Marketing Associate at <span className="strong">STOP Marketing Agency</span> and co-founder of <span className="strong">Poply Inc.</span> — building, shipping and growing client sites across WordPress, Webflow and Drupal.
+          </p>
         </div>
-      </div>
+      </Reveal>
     </div>
-  );
-};
+  </section>
+);
 
 export default About;

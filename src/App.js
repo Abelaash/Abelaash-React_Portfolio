@@ -1,47 +1,40 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Achievements from "./components/Achievements";
-import { Skills } from "./components/Skills";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Work from "./components/Work";
+import Experience from "./components/Experience";
+import SkillsEducation from "./components/SkillsEducation";
+import Contact from "./components/Contact";
 
 import CapstoneProject from "./components/CapstoneProject";
 import FootballManager from "./components/FootballManager";
 
-function App() {
+function Home() {
+  return (
+    <>
+      <Hero />
+      <About />
+      <Work />
+      <Experience />
+      <SkillsEducation />
+      <Contact />
+    </>
+  );
+}
+
+export default function App() {
   return (
     <Router>
+      <div className="grain" />
       <Navbar />
       <Routes>
-        {/* Main Portfolio (one-page style) */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
-              <About />
-              <Education />
-              <Skills />
-              <Projects />
-              <Experience />
-              <Achievements />
-              <Contact />
-            </>
-          }
-        />
-
-        {/* Project Detail Pages */}
+        <Route path="/" element={<Home />} />
         <Route path="/movie-recommendation" element={<CapstoneProject />} />
         <Route path="/football-manager" element={<FootballManager />} />
       </Routes>
     </Router>
   );
 }
-
-export default App;

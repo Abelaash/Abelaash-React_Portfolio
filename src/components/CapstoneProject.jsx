@@ -1,56 +1,36 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const CapstoneProject = () => {
-  return (
-    <div className="text-white bg-[#0a192f] min-h-screen p-10">
-      <h1 className="text-4xl font-bold border-b-4 border-pink-600 inline-block mb-6">
-        Movie Recommendation App
-      </h1>
+const CapstoneProject = () => (
+  <div className="detail">
+    <Link to="/" className="back">← Back to portfolio</Link>
+    <h1>Movie Recommendation App<span className="accent">.</span></h1>
+    <p className="lead">
+      An AI-powered, personalized movie and TV recommendation system built as my final-year capstone. It helps users discover content, get tailored suggestions, track watch history, and explore entertainment through a modern UI and intelligent backend.
+    </p>
 
-      <p className="mb-6 text-lg max-w-3xl">
-        The <strong>MovieCapstoneProject</strong> is an AI-powered, personalized movie and TV show recommendation system built as a final-year capstone project.
-        It helps users discover new content, get tailored suggestions, track their watch history, and explore entertainment through a modern UI and intelligent backend.
-      </p>
+    <h2>Features</h2>
+    <ul>
+      <li>Personalized recommendations based on user preferences</li>
+      <li>Search across movies and shows</li>
+      <li>AI chatbot to explore genres, moods and actors</li>
+      <li>Watch history tracking & saved content</li>
+      <li>Filter & sort by genre, rating, status</li>
+      <li>Secure sign-up / login with profile management</li>
+    </ul>
 
-      <h2 className="text-2xl font-semibold text-pink-400 mb-2">🚀 Features</h2>
-      <ul className="list-disc list-inside mb-6 text-base leading-7">
-        <li>⭐ Personalized Recommendations based on user preferences</li>
-        <li>🔍 Search Functionality for movies and shows</li>
-        <li>🧠 AI Chatbot to explore genres, moods, actors</li>
-        <li>📅 Watch History Tracking & Saved Content</li>
-        <li>🔄 Filter & Sort by genre, rating, status</li>
-        <li>🔐 Secure Sign-up/Login with profile management</li>
-      </ul>
+    <h2>Tech stack</h2>
+    <ul>
+      <li>Frontend — React Native (Expo)</li>
+      <li>Backend — Django + Django REST Framework</li>
+      <li>Database — MySQL (AWS RDS)</li>
+      <li>APIs — TMDb, IMDb</li>
+      <li>Cloud — AWS (EC2 + RDS)</li>
+      <li>AI/ML — Random Forest & Google GenAI</li>
+    </ul>
 
-      <h2 className="text-2xl font-semibold text-pink-400 mb-2">🛠️ Tech Stack</h2>
-      <ul className="list-disc list-inside mb-6 text-base leading-7">
-        <li>Frontend: React Native (Expo)</li>
-        <li>Backend: Django + Django REST Framework</li>
-        <li>Database: MySQL (AWS RDS)</li>
-        <li>APIs: TMDb, IMDb</li>
-        <li>Cloud Hosting: AWS (EC2 + RDS)</li>
-        <li>AI/ML: Random Forest & Generative AI (Google GenAI)</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold text-pink-400 mb-2">📁 Project Structure</h2>
-      <p className="mb-4 text-base">
-        <strong>Frontend (React Native - Expo)</strong>: Reusable components, API calls, and UI logic live in the <code>CapstoneProject</code> folder.<br />
-        <strong>Backend (Django)</strong>: Recommendation engine, models, and APIs reside under <code>moviecapstone</code>.
-      </p>
-
-      <div className="flex gap-4 mt-6">
-        <a
-          href="https://github.com/Abelaash/MovieCapstoneProject"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="bg-pink-600 hover:bg-pink-500 text-white px-6 py-2 rounded">
-            View Code on GitHub
-          </button>
-        </a>
-      </div>
-    </div>
-  );
-};
+    <a href="https://github.com/Abelaash/MovieCapstoneProject" target="_blank" rel="noreferrer" className="ghost-btn">View code on GitHub ↗</a>
+  </div>
+);
 
 export default CapstoneProject;

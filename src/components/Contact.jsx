@@ -1,27 +1,44 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Eyebrow, Reveal } from "./Reveal";
+import { social } from "../data/portfolio";
 
 const Contact = () => {
+  const [clock, setClock] = useState("");
+  useEffect(() => {
+    const tick = () => setClock(new Date().toLocaleTimeString("en-CA", { hour: "2-digit", minute: "2-digit", hour12: false }) + " EST");
+    tick();
+    const i = setInterval(tick, 1000);
+    return () => clearInterval(i);
+  }, []);
+
   return (
-    <div id="contact" className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
-      <form method="POST" action="https://getform.io/f/3d91882c-424a-43f6-bc26-be80afd9b0d4" className='flex flex-col max-w-[600px] w-full'>
-        <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>Contact</p>
-          <p className='text-gray-300 py-4'>Please submit the form below</p>
+    <section className="contact" id="contact">
+      <div className="wrap">
+        <Eyebrow num="(06)">Let's talk</Eyebrow>
+        <Reveal as="h2" className="contact-title">
+          Let's build<br />something <span className="serif-i">together.</span>
+        </Reveal>
+        <Reveal>
+          <a href={`mailto:${social.email}`} className="email-big">
+            {social.email} <span className="arr">↗</span>
+          </a>
+        </Reveal>
+        <Reveal className="contact-foot">
+          <div className="contact-links">
+            <a href={social.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={social.github} target="_blank" rel="noreferrer">GitHub</a>
+            <a href={`mailto:${social.email}`}>Email</a>
+          </div>
+          <p className="contact-note">Currently open to new opportunities in web development & digital design.</p>
+        </Reveal>
+        <div className="footer-bar">
+          <p>© 2026 Abelaash Giritharan</p>
+          <p>{clock}</p>
+          <p>Built with <span>React</span> · Deployed on <span>Vercel</span></p>
         </div>
-        <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name="name" />
-        <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name="email" />
-        <textarea className='bg-[#ccd6f6] p-2' name="message" rows="10" placeholder='Message'></textarea>
-        <button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center'>Submit</button>
-      </form>
-
-      {/* Mobile Contact */}
-
-      <div>
-        
       </div>
+    </section>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Contact
+export default Contact;

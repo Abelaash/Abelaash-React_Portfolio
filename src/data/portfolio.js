@@ -1,6 +1,6 @@
 import canopy from "../assets/canopy.png";
 import arktis from "../assets/arktis.png";
-import clearpath from "../assets/clearpath";
+import clearpath from "../assets/clearpath.png";
 import fjordkraft from "../assets/fjorddkraft";
 import lys from "../assets/lys";
 import laurel from "../assets/laurel";

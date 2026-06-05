@@ -23,7 +23,6 @@ export const work = [
   { n: "09", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "F&B"], img: halalstreeteatz, link: "https://halalstreeteatz.com/" },
 
   // ── Figma mockups — paste your Figma share links into `link` when ready ──
-  { n: "10", t: "EgglessCakeShop", y: "'24", cat: "Figma", desc: "UI/UX mockup for an online bakery brand.", tags: ["Figma", "UI/UX"], img: null, link: "https://www.figma.com/design/5uiHlFSrxKPtWqCeh2suDE/Eggless-Cake-Shop-Mockup" },
   { n: "11", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Mobile app mockup for a street-food brand.", tags: ["Figma", "Mobile"], img: null, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ" },
 
   { n: "12", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject" },

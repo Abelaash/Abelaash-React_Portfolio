@@ -4,8 +4,11 @@ import clearpath from "../assets/clearpath.png";
 import fjordkraft from "../assets/fjordkraft.png";
 import lys from "../assets/lys.png";
 import laurel from "../assets/laurel.png";
-
-
+import StopMarketing from "../assets/StopMarketing.png";
+import halastreeteatz from "../assets/HalalStreeteatz.png"
+import mystiqueresto from "../assets/mystique.jpg";
+import movie from "../assets/capstone.png";
+import footballmanager from "../assets/footballmanager.png"
 export const work = [
   { n: "01", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Sustainable architecture studio — Toronto.", tags: ["Webflow", "Brand", "🇨🇦"], img: canopy, link: null },
   { n: "02", t: "Arktis", y: "'26", cat: "Webflow", desc: "Premium Norwegian cold-brew coffee brand.", tags: ["Webflow", "E-comm", "🇳🇴"], img: arktis, link: null },
@@ -13,15 +16,14 @@ export const work = [
   { n: "04", t: "Lys", y: "'26", cat: "Webflow", desc: "Contemporary art exhibition in Tromsø.", tags: ["Webflow", "Culture", "🇳🇴"], img: lys, link: null },
   { n: "05", t: "Fjordkraft Gear", y: "'26", cat: "Webflow", desc: "Norwegian outdoor gear brand.", tags: ["Webflow", "Brand", "🇳🇴"], img: fjordkraft, link: null },
   { n: "06", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Vancouver AI productivity SaaS.", tags: ["Webflow", "SaaS", "🇨🇦"], img: clearpath, link: null },
-  { n: "07", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: null, link: "https://stopmarketing.ag/" },
-  { n: "08", t: "Uplyfted Marketing", y: "'25", cat: "WordPress", desc: "Full marketing agency website build.", tags: ["WordPress", "Agency"], img: null, link: "https://uplyftedmarketing.agency/" },
-  { n: "09", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Hospitality"], img: null, link: "https://mystiqueresto.com/" },
-  { n: "10", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "F&B"], img: null, link: "https://halalstreeteatz.com/" },
-  { n: "11", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: null, link: "https://github.com/Abelaash/MovieCapstoneProject" },
-  { n: "12", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: null, link: "https://github.com/Abelaash/cpan369_FootballManager" },
+  { n: "07", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: StopMarketing, link: "https://stopmarketing.ag/" },
+  { n: "09", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Hospitality"], img: mystiqueresto, link: "https://mystiqueresto.com/" },
+  { n: "10", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "F&B"], img: halastreeteatz, link: "https://halalstreeteatz.com/" },
+  { n: "11", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject" },
+  { n: "12", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager" },
 ];
 
-export const workCategories = ["All", "Webflow", "WordPress", "Dev"];
+export const workCategories = ["All", "Webflow", "WordPress", "Dev", "Figma"];
 
 export const experience = [
   { y: "2024", role: "Digital Marketing Associate", co: "STOP Marketing Agency", desc: "Plan and run digital campaigns across social, email and web; collaborate with design & dev to ship integrated, results-driven work.", tag: "Present" },

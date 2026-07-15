@@ -2,13 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 
-export default function App() {
-  return (
-    <MotionConfig reducedMotion="user">
-      {/* ...your existing tree... */}
-    </MotionConfig>
-  );
-}
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -35,7 +29,8 @@ function Home() {
 
 export default function App() {
   return (
-    <Router>
+    <MotionConfig reducedMotion="user">
+      <Router>
       <div className="grain" />
       <Navbar />
       <Routes>
@@ -44,5 +39,6 @@ export default function App() {
         <Route path="/football-manager" element={<FootballManager />} />
       </Routes>
     </Router>
+    </MotionConfig>
   );
 }

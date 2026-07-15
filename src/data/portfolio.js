@@ -11,8 +11,6 @@ import movie from "../assets/capstone.png";
 import footballmanager from "../assets/footballmanager.png";
 import halalstreetWeb from "../assets/HalalStreetEatzWeb.png";
 import KaboomWings from "../assets/kaboomwings.jpg";
-import KaboomWingsMenu from "../assets/pdf/KaboomWingsMenu.pdf";
-import MystiqueMenu from "../assets/pdf/MystiqueMenu.pdf";
 
 // Uncomment once exported — CRA hard-fails the build on a missing asset.
 // import MystiqueMenuCover from "../assets/mystique-menu.png";
@@ -27,6 +25,10 @@ import MystiqueMenu from "../assets/pdf/MystiqueMenu.pdf";
  * so dropping a link never silently changes a card's meaning.
  *
  * `eta` is read ONLY when status === "soon". Anywhere else it's dead data.
+ *
+ * PDFs live in /public/pdf and are referenced as plain strings, NOT imports.
+ * Files under public/ are copied verbatim and never touched by webpack, so a
+ * wrong path 404s on click instead of failing the build. Verify by clicking.
  */
 export const work = [
   // ── Concept work — self-initiated, labelled as such ──────────────
@@ -46,10 +48,10 @@ export const work = [
 
   // ── Print / brand design ────────────────────────────────────────
   // Ordered here to match CATEGORY_ORDER, so grid order and pill order agree.
-  { n: "11", t: "Kaboom Wings — Menu", y: "'26", cat: "Canva", desc: "Trifold and dine-in menus built on a comic pop-art brand system.", tags: ["Canva", "Print", "Menu"], img: KaboomWings, link: KaboomWingsMenu, status: "live" },
+  { n: "11", t: "Kaboom Wings — Menu", y: "'26", cat: "Canva", desc: "Trifold and dine-in menus built on a comic pop-art brand system.", tags: ["Canva", "Print", "Menu"], img: KaboomWings, link: "/pdf/KaboomWingsMenu.pdf", status: "live" },
   // img: swap to MystiqueMenuCover once exported — do NOT reuse mystique.jpg,
   // card 08 already uses it and the duplicate reads as a copy-paste slip.
-  { n: "12", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: null, link: MystiqueMenu, status: "live" },
+  { n: "12", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: null, link: "/pdf/MystiqueMenu.pdf", status: "live" },
 
   // ── Dev ─────────────────────────────────────────────────────────
   { n: "13", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },

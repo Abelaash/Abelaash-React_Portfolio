@@ -11,26 +11,45 @@ import movie from "../assets/capstone.png";
 import footballmanager from "../assets/footballmanager.png";
 import halalstreetWeb from "../assets/HalalStreetEatzWeb.png";
 
+/**
+ * status — the single source of truth for how a card presents.
+ *   "live"    → shipped client work, `link` points at the real thing
+ *   "concept" → self-initiated / spec work, built but no client
+ *   "soon"    → real work, case study not written yet
+ *
+ * `link` is now ONLY a URL. It is no longer doing double duty as a
+ * status flag, so dropping a link never silently changes a card's meaning.
+ */
 export const work = [
-  { n: "01", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Sustainable architecture studio — Toronto.", tags: ["Webflow", "Brand", "🇨🇦"], img: canopy, link: null },
-  { n: "02", t: "Arktis", y: "'26", cat: "Webflow", desc: "Premium Norwegian cold-brew coffee brand.", tags: ["Webflow", "E-comm", "🇳🇴"], img: arktis, link: null },
-  { n: "03", t: "The Laurel", y: "'26", cat: "Webflow", desc: "Canadian culture & design editorial journal.", tags: ["Webflow", "Editorial", "🇨🇦"], img: laurel, link: null },
-  { n: "04", t: "Lys", y: "'26", cat: "Webflow", desc: "Contemporary art exhibition in Tromsø.", tags: ["Webflow", "Culture", "🇳🇴"], img: lys, link: null },
-  { n: "05", t: "Fjordkraft Gear", y: "'26", cat: "Webflow", desc: "Norwegian outdoor gear brand.", tags: ["Webflow", "Brand", "🇳🇴"], img: fjordkraft, link: null },
-  { n: "06", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Vancouver AI productivity SaaS.", tags: ["Webflow", "SaaS", "🇨🇦"], img: clearpath, link: null },
+  // ── Concept work — self-initiated, labelled as such ──────────────
+  { n: "01", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Self-initiated concept — sustainable architecture studio, Toronto.", tags: ["Webflow", "Brand"], img: canopy, link: null, status: "concept" },
+  { n: "02", t: "Arktis", y: "'26", cat: "Webflow", desc: "Self-initiated concept — Nordic cold-brew coffee brand.", tags: ["Webflow", "E-comm"], img: arktis, link: null, status: "concept" },
+  { n: "03", t: "The Laurel", y: "'26", cat: "Webflow", desc: "Self-initiated concept — culture & design editorial journal.", tags: ["Webflow", "Editorial"], img: laurel, link: null, status: "concept" },
+  { n: "04", t: "Lys", y: "'26", cat: "Webflow", desc: "Self-initiated concept — contemporary art exhibition site.", tags: ["Webflow", "Culture"], img: lys, link: null, status: "concept" },
+  { n: "05", t: "Nordvind Gear", y: "'26", cat: "Webflow", desc: "Self-initiated concept — outdoor gear brand.", tags: ["Webflow", "Brand"], img: fjordkraft, link: null, status: "concept" },
+  { n: "06", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Self-initiated concept — AI productivity SaaS landing page.", tags: ["Webflow", "SaaS"], img: clearpath, link: null, status: "concept" },
 
-  { n: "07", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: StopMarketing, link: "https://stopmarketing.ag/" },
-  { n: "08", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Restaurant"], img: mystiqueresto, link: "https://mystiqueresto.com/" },
-  { n: "09", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "Restaurant"], img: halalstreetWeb, link: "https://halalstreeteatz.com/" },
+  // ── Shipped client work ─────────────────────────────────────────
+  { n: "07", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: StopMarketing, link: "https://stopmarketing.ag/", status: "live" },
+  { n: "08", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Restaurant"], img: mystiqueresto, link: "https://mystiqueresto.com/", status: "live" },
+  { n: "09", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "Restaurant"], img: halalstreetWeb, link: "https://halalstreeteatz.com/", status: "live" },
 
-  // ── Figma mockups — paste your Figma share links into `link` when ready ──
-  { n: "11", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Web app mockup for a street-food brand.", tags: ["Figma", "Web", "WordPress"], img: halalstreeteatz, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ" },
+  { n: "10", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Web app mockup for a street-food brand.", tags: ["Figma", "Web"], img: halalstreeteatz, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ", status: "live" },
 
-  { n: "12", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject" },
-  { n: "13", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager" },
+  { n: "11", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },
+  { n: "12", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager", status: "live" },
+
+  // ── Paid media — real work, case studies in progress ─────────────
+  { n: "13", t: "Laser Spot", y: "'26", cat: "Google Ads", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "14", t: "Eggless Cake Shop", y: "'26", cat: "Meta Ads", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
 ];
 
-export const workCategories = ["All", "Webflow", "WordPress", "Figma", "Dev"];
+// Derived so a pill can never outlive its projects.
+const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Dev", "Google Ads", "Meta Ads"];
+export const workCategories = [
+  "All",
+  ...CATEGORY_ORDER.filter((c) => work.some((w) => w.cat === c)),
+];
 
 export const experience = [
   { y: "2024", role: "Digital Marketing Associate", co: "STOP Marketing Agency", desc: "Plan and run digital campaigns across social, email and web; collaborate with design & dev to ship integrated, results-driven work.", tag: "Present" },

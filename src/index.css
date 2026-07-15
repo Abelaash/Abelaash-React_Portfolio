@@ -167,3 +167,96 @@ body{background:var(--bg);color:var(--paper);font-family:'Space Grotesk',sans-se
 .navlink-btn:hover{opacity:1}
 .mobile-link-btn{background:none;border:none;font-family:inherit;cursor:pointer;font-size:36px;font-weight:600;color:var(--paper);text-transform:uppercase;letter-spacing:-.02em}
 .mobile-link-btn:hover{color:var(--accent)}
+
+/* ══════════════════════════════════════════════════════════════════
+   Append BOTH blocks to the end of src/index.css, in this order.
+   The reduced-motion block must come last — .strip-track{animation:none}
+   has the same specificity as the rule it overrides, so order decides it.
+   ══════════════════════════════════════════════════════════════════ */
+
+
+/* ── WORK — status badges ─────────────────────────────────────────
+   .proj-thumb is already position:relative, so the badge anchors cleanly.
+
+   Bottom-left, not top-right: .proj-num owns top-left and .proj-arrow
+   owns top-right (top:24px right:24px on .proj). Bottom-left is the
+   only corner that stays free once a concept card gets a real link.
+─────────────────────────────────────────────────────────────────── */
+
+.proj-status{
+  position:absolute;
+  bottom:16px;
+  left:16px;
+  z-index:2;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  padding:5px 12px;
+  border-radius:999px;
+  backdrop-filter:blur(8px);
+}
+
+/* Concept — quiet. Real work, just not a client. */
+.proj-status--concept{
+  background:rgba(13,13,12,.6);
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.proj:hover .proj-status--concept{
+  border-color:rgba(244,241,234,.35);
+  color:var(--paper);
+}
+
+/* Coming soon — accent, because you want it seen. Matches .filter.active. */
+.proj-status--soon{
+  background:var(--accent);
+  border:1px solid var(--accent);
+  color:#fff;
+}
+
+/* Dashed card outline reads as "not filled in yet".
+   Applied to .proj, not .proj-thumb — the thumb is clipped by the
+   parent's 14px radius + overflow:hidden, so a border there breaks up. */
+.proj--soon{
+  border-style:dashed;
+}
+.proj--soon .proj-thumb .ph{
+  color:#2a2a24;
+}
+
+/* Concept thumbs sit one step back from shipped work.
+   Both properties declared together — a second rule re-declaring
+   `transition` would silently drop the transform easing above. */
+.proj--concept .proj-thumb img{
+  opacity:.72;
+  transition:opacity .3s, transform .7s cubic-bezier(.16,1,.3,1);
+}
+.proj--concept:hover .proj-thumb img{
+  opacity:1;
+}
+
+
+/* ── GLOBAL — reduced motion ──────────────────────────────────────
+   Covers CSS animations only. framer-motion runs on JS transforms and
+   never reads this — wrap the app in <MotionConfig reducedMotion="user">
+   to cover Work.jsx, Reveal.jsx and anything added later.
+
+   Keep this block last in the file.
+─────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce){
+  /* The marquee is the real offender: infinite, unprompted, unstoppable. */
+  .strip-track{
+    animation:none;
+  }
+
+  *, *::before, *::after{
+    animation-duration:.01ms !important;
+    animation-delay:0s !important;          /* else .strip / .hero-meta sit at opacity:0 for their delay, then snap */
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;        /* html{scroll-behavior:smooth} — your nav links depend on it */
+  }
+}

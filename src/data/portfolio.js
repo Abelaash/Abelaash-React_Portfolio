@@ -10,15 +10,23 @@ import mystiqueresto from "../assets/mystique.jpg";
 import movie from "../assets/capstone.png";
 import footballmanager from "../assets/footballmanager.png";
 import halalstreetWeb from "../assets/HalalStreetEatzWeb.png";
+import KaboomWings from "../assets/kaboomwings.jpg";
+import KaboomWingsMenu from "../assets/pdf/KaboomWingsMenu.pdf";
+import MystiqueMenu from "../assets/pdf/MystiqueMenu.pdf";
+
+// Uncomment once exported — CRA hard-fails the build on a missing asset.
+// import MystiqueMenuCover from "../assets/mystique-menu.png";
 
 /**
  * status — the single source of truth for how a card presents.
- *   "live"    → shipped client work, `link` points at the real thing
+ *   "live"    → shipped work, `link` points at the real thing
  *   "concept" → self-initiated / spec work, built but no client
- *   "soon"    → real work, case study not written yet
+ *   "soon"    → real work, not public yet. Requires `eta`.
  *
- * `link` is now ONLY a URL. It is no longer doing double duty as a
- * status flag, so dropping a link never silently changes a card's meaning.
+ * `link` is ONLY a URL. It is not doing double duty as a status flag,
+ * so dropping a link never silently changes a card's meaning.
+ *
+ * `eta` is read ONLY when status === "soon". Anywhere else it's dead data.
  */
 export const work = [
   // ── Concept work — self-initiated, labelled as such ──────────────
@@ -36,16 +44,24 @@ export const work = [
 
   { n: "10", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Web app mockup for a street-food brand.", tags: ["Figma", "Web"], img: halalstreeteatz, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ", status: "live" },
 
-  { n: "11", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },
-  { n: "12", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager", status: "live" },
+  // ── Print / brand design ────────────────────────────────────────
+  // Ordered here to match CATEGORY_ORDER, so grid order and pill order agree.
+  { n: "11", t: "Kaboom Wings — Menu", y: "'26", cat: "Canva", desc: "Trifold and dine-in menus built on a comic pop-art brand system.", tags: ["Canva", "Print", "Menu"], img: KaboomWings, link: KaboomWingsMenu, status: "live" },
+  // img: swap to MystiqueMenuCover once exported — do NOT reuse mystique.jpg,
+  // card 08 already uses it and the duplicate reads as a copy-paste slip.
+  { n: "12", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: null, link: MystiqueMenu, status: "live" },
+
+  // ── Dev ─────────────────────────────────────────────────────────
+  { n: "13", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },
+  { n: "14", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager", status: "live" },
 
   // ── Paid media — real work, case studies in progress ─────────────
-  { n: "13", t: "Laser Spot", y: "'26", cat: "Google Ads", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
-  { n: "14", t: "Eggless Cake Shop", y: "'26", cat: "Meta Ads", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "15", t: "Laser Spot", y: "'26", cat: "Google Ads", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "16", t: "Eggless Cake Shop", y: "'26", cat: "Meta Ads", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
 ];
 
 // Derived so a pill can never outlive its projects.
-const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Dev", "Google Ads", "Meta Ads"];
+const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Canva", "Dev", "Google Ads", "Meta Ads"];
 export const workCategories = [
   "All",
   ...CATEGORY_ORDER.filter((c) => work.some((w) => w.cat === c)),
@@ -62,7 +78,7 @@ export const experience = [
 export const skills = [
   { h: "Development", list: ["React", "JavaScript", "HTML/CSS", "Node", "Python", "Django", "PHP"] },
   { h: "Platforms / CMS", list: ["Webflow", "Drupal", "WordPress", "Shopify", "Elementor"] },
-  { h: "Design & Tools", list: ["Figma", "Git", "AWS", "Docker", "Vercel"] },
+  { h: "Design & Tools", list: ["Figma", "Canva", "Git", "AWS", "Docker", "Vercel"] },
   { h: "Marketing", list: ["Campaign strategy", "SEO", "Email", "Analytics"] },
 ];
 

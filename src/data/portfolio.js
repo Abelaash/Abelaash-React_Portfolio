@@ -51,7 +51,7 @@ export const work = [
   { n: "11", t: "Kaboom Wings — Menu", y: "'26", cat: "Canva", desc: "Trifold and dine-in menus built on a comic pop-art brand system.", tags: ["Canva", "Print", "Menu"], img: KaboomWings, link: "/pdf/KaboomWingsMenu.pdf", status: "live" },
   // img: swap to MystiqueMenuCover once exported — do NOT reuse mystique.jpg,
   // card 08 already uses it and the duplicate reads as a copy-paste slip.
-  { n: "12", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: null, link: "/pdf/MystiqueMenu.pdf", status: "live" },
+  { n: "12", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: mystiqueresto, link: "/pdf/MystiqueMenu.pdf", status: "live" },
 
   // ── Dev ─────────────────────────────────────────────────────────
   { n: "13", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },

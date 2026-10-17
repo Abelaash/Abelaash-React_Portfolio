@@ -107,7 +107,7 @@ const Navbar = () => {
       </ul>
 
       {/* SOCIAL ICONS */}
-      <div className="fixed left-0 top-[35%] z-40 hidden flex-col lg:flex">
+      <div className="fixed left-0 top-[35%] z-40 hidden flex-col xl:flex">
         <ul>
           <li className="ml-[-100px] flex h-[56px] w-[160px] items-center justify-between border border-l-0 border-[#f4f1ea]/[.12] bg-[#121210] px-4 duration-300 hover:ml-[-10px] hover:bg-[#ff5b1f]">
             <a

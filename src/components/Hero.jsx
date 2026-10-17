@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-[2] flex min-h-screen w-full flex-col justify-center bg-[#0d0d0c] px-6 pb-[100px] pt-[110px] font-['Space_Grotesk',sans-serif] text-[#f4f1ea] md:px-10"
+      className="relative z-[2] flex min-h-screen w-full flex-col justify-center bg-[#0d0d0c] px-6 pb-[100px] pt-[110px] font-['Space_Grotesk',sans-serif] text-[#f4f1ea] md:px-10 xl:px-24"
     >
       {/* Animations used below */}
       <style>{`
@@ -49,14 +49,15 @@ const Hero = () => {
       <div className="hero-rise mt-12 flex flex-wrap items-end justify-between gap-6 [animation-delay:.7s]">
         <div className="max-w-[440px]">
           <p className="text-[clamp(20px,2.5vw,26px)] leading-[1.25] tracking-[-0.01em]">
-            Web developer{" "}
+            Web development{" "}
             <span className="font-['Instrument_Serif',serif] italic text-[#ff5b1f]">&amp;</span>{" "}
-            digital marketer building work that{" "}
-            <span className="font-['Instrument_Serif',serif] italic text-[#ff5b1f]">performs.</span>
+            digital marketing, built to{" "}
+            <span className="font-['Instrument_Serif',serif] italic text-[#ff5b1f]">perform.</span>
           </p>
-          <p className="mt-3.5 max-w-[380px] text-sm leading-relaxed text-[#9a958a]">
-            React, Webflow, Drupal &amp; WordPress development — paired with marketing
-            strategy at STOP Marketing Agency.
+          <p className="mt-3.5 max-w-[420px] text-sm leading-relaxed text-[#9a958a]">
+            Now in Oslo and open to agency roles. React, Webflow and WordPress on the
+            build side; Google Ads, Meta Ads, SEO and GoHighLevel automation on the
+            growth side.
           </p>
         </div>
 

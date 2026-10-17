@@ -60,10 +60,16 @@ export const work = [
   // ── Paid media — real work, case studies in progress ─────────────
   { n: "15", t: "Laser Spot", y: "'26", cat: "Marketing", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
   { n: "16", t: "Eggless Cake Shop", y: "'26", cat: "Marketing", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+
+  // ── AI Automation — Make.com scenarios ──────────────────────────
+  { n: "17", t: "AI Competitor Website Monitor", y: "'26", cat: "AI Automation", desc: "Watches competitor websites for changes and summarises what's new with AI.", tags: ["Make.com", "AI", "Monitoring"], img: null, link: null, status: "live" },
+  { n: "18", t: "AI SEO Content Brief Generator", y: "'26", cat: "AI Automation", desc: "Turns target keywords into structured SEO content briefs, saved to Google Sheets & Docs.", tags: ["Make.com", "AI", "SEO"], img: null, link: null, status: "live" },
+  { n: "19", t: "AI Ad Copy Localizer (EN → NO)", y: "'26", cat: "AI Automation", desc: "Adapts English ad copy into natural Norwegian for local campaigns.", tags: ["Make.com", "AI", "Paid Media"], img: null, link: null, status: "live" },
+  { n: "20", t: "AI Content Repurposing Engine", y: "'26", cat: "AI Automation", desc: "Takes new posts from an RSS feed and repurposes them into ready-to-use social content.", tags: ["Make.com", "AI", "Content"], img: null, link: null, status: "live" },
 ];
 
 // Derived so a pill can never outlive its projects.
-const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Canva", "Dev", "Marketing"];
+const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Canva", "Dev", "Marketing", "AI Automation"];
 export const workCategories = [
   "All",
   ...CATEGORY_ORDER.filter((c) => work.some((w) => w.cat === c)),

@@ -58,12 +58,12 @@ export const work = [
   { n: "14", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager", status: "live" },
 
   // ── Paid media — real work, case studies in progress ─────────────
-  { n: "15", t: "Laser Spot", y: "'26", cat: "Google Ads", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
-  { n: "16", t: "Eggless Cake Shop", y: "'26", cat: "Meta Ads", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "15", t: "Laser Spot", y: "'26", cat: "Marketing", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "16", t: "Eggless Cake Shop", y: "'26", cat: "Marketing", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
 ];
 
 // Derived so a pill can never outlive its projects.
-const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Canva", "Dev", "Google Ads", "Meta Ads"];
+const CATEGORY_ORDER = ["Webflow", "WordPress", "Figma", "Canva", "Dev", "Marketing"];
 export const workCategories = [
   "All",
   ...CATEGORY_ORDER.filter((c) => work.some((w) => w.cat === c)),

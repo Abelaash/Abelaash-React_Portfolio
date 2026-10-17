@@ -11,7 +11,7 @@ const About = () => (
       <Reveal className="two" delay={0.1}>
         <div>
           <p className="body-muted">
-            I'm a Humber College Computer Programming & Analysis graduate based in Brampton, Ontario. I build responsive, conversion-focused websites and pair them with the marketing strategy to make them work.
+            I'm a Humber College Computer Programming & Analysis graduate based in Oslo, Norway. I build responsive, conversion-focused websites and pair them with the marketing strategy to make them work.
           </p>
         </div>
         <div>

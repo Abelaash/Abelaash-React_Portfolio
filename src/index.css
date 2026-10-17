@@ -38,17 +38,19 @@ body{background:var(--bg);color:var(--paper);font-family:'Space Grotesk',sans-se
 @media(max-width:760px){.navlinks,.clock{display:none}.burger{display:block}}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 40px;position:relative;z-index:2}
-@media(max-width:600px){.hero{padding:0 24px}}
+/* top padding clears the fixed nav; bottom padding reserves room for the absolute marquee strip */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:104px 40px 100px;position:relative;z-index:2}
+@media(max-width:600px){.hero{padding:110px 24px 100px}}
 .kicker{display:flex;align-items:center;gap:16px;margin-bottom:40px;opacity:0;animation:rise .9s .1s forwards}
 .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
 .kicker span{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .kicker .rule{flex:1;height:1px;background:var(--line);max-width:120px}
-.title{font-size:clamp(56px,15vw,210px);line-height:.82;letter-spacing:-.04em;font-weight:700;text-transform:uppercase}
-.title .line{display:block;overflow:hidden}
-.title .line span{display:block;transform:translateY(110%);animation:reveal 1s cubic-bezier(.16,1,.3,1) forwards}
-.title .line1 span{animation-delay:.2s}
-.title .line2 span{animation-delay:.35s}
+.title{font-size:clamp(40px,min(14vw,21vh),210px);line-height:.82;letter-spacing:-.04em;font-weight:700;text-transform:uppercase}
+.title .line{display:block;overflow:hidden;white-space:nowrap}
+/* direct child only — the old `.line span` also hit the accent "." and pushed it onto its own line */
+.title .line > span{display:block;transform:translateY(110%);animation:reveal 1s cubic-bezier(.16,1,.3,1) forwards}
+.title .line1 > span{animation-delay:.2s}
+.title .line2 > span{animation-delay:.35s}
 .title .accent{color:var(--accent)}
 .hero-meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:48px;flex-wrap:wrap;gap:24px;opacity:0;animation:rise .9s .7s forwards}
 .hero-role{max-width:440px}

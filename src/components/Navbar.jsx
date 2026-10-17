@@ -13,8 +13,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const tick = () => {
-      const t = new Date().toLocaleTimeString("en-CA", { hour: "2-digit", minute: "2-digit", hour12: false });
-      setClock(`${t} — Brampton, ON`);
+      const t = new Date().toLocaleTimeString("en-GB", {
+        timeZone: "Europe/Oslo",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      });
+      setClock(`${t} — Oslo, NO`);
     };
     tick();
     const i = setInterval(tick, 1000);

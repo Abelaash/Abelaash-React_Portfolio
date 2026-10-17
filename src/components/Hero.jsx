@@ -35,11 +35,11 @@ const Hero = () => {
 
       {/* Name */}
       <h1 className="text-[clamp(40px,min(14vw,21vh),210px)] font-bold uppercase leading-[0.82] tracking-[-0.04em]">
-        <span className="block overflow-hidden whitespace-nowrap">
-          <span className="hero-reveal block [animation-delay:.2s]">Abelaash</span>
+        <span className="flex overflow-hidden whitespace-nowrap">
+          <span className="hero-reveal flex [animation-delay:.2s]">Abelaash</span>
         </span>
-        <span className="block overflow-hidden whitespace-nowrap">
-          <span className="hero-reveal block [animation-delay:.35s]">
+        <span className="flex overflow-hidden whitespace-nowrap">
+          <span className="hero-reveal flex [animation-delay:.35s]">
             Giritharan<span className="text-[#ff5b1f]">.</span>
           </span>
         </span>

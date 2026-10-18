@@ -7,6 +7,7 @@ import weeklyAdReport from "../assets/automation/weekly-ad-report.jpg";
 import adAnomalyAlert from "../assets/automation/ad-anomaly-alert.jpg";
 import staleDealAlert from "../assets/automation/stale-deal-alert.jpg";
 import staleDealPipeline from "../assets/automation/stale-deal-pipeline.jpg";
+import meetingNotesCrm from "../assets/automation/meeting-notes-crm.jpg";
 
 /**
  * AI Automation case studies — one entry per Make.com scenario.
@@ -14,6 +15,35 @@ import staleDealPipeline from "../assets/automation/stale-deal-pipeline.jpg";
  * through their `route` field, so keep the two in sync.
  */
 export const automations = {
+  "meeting-notes-crm": {
+    title: "AI Meeting Notes to CRM",
+    sub: "Call notes → HubSpot",
+    img: meetingNotesCrm,
+    imgAlt: "Make.com scenario: Google Sheets trigger, HubSpot deal search, four AI steps, HubSpot note, deal update and task, Google Sheets update",
+    lead: "Paste rough sales-call notes into a sheet and the CRM updates itself: a clean summary logged on the deal, the deal moved to the right stage, our next steps set, and a follow-up email drafted in a task.",
+    stack: ["Make.com", "Make AI Toolkit", "HubSpot CRM", "HubSpot API", "Google Sheets"],
+    problem: "After a sales call the notes live in someone's notebook or head. Updating the CRM — summary, stage, next step, follow-up email — is the part everyone skips, so pipelines go stale and follow-ups slip.",
+    trigger: "A new row in the Meeting Notes Inbox sheet: company, contact and the raw notes, written however they came out on the call.",
+    steps: [
+      "Make finds the matching deal in HubSpot through the search API.",
+      "AI step 1 turns the notes into a clean summary: where the deal stands, the client's needs and decisions, and their concerns.",
+      "AI step 2 lists only the agency's own next steps, with deadlines when the notes give one.",
+      "AI step 3 picks the deal stage by working through ordered rules — signed, then lost or postponed, then contract sent, and so on.",
+      "AI step 4 drafts the follow-up email: recap, next steps and dates, a direct answer to the client's main concern.",
+      "HubSpot: the summary is logged as a note on the deal, the deal moves to the new stage with its next step set, and a follow-up task holds the email draft.",
+      "The sheet row is marked Done with the summary, stage and a link to the deal.",
+    ],
+    table: {
+      head: ["Test call", "What happened", "Stage set", "Our next steps"],
+      rows: [
+        ["Fjord Dental", "Likes the plan, wants a lower 12k/mo start; revised proposal due Tue 20 Oct", "Presentation Scheduled", "Send revised proposal by 20 Oct; prepare a sample report; book a 15-min call"],
+        ["Bakeriet Grünerløkka", "Pausing all marketing until March; \"reach out in Feb\"", "Closed Lost (can be reopened)", "Send the free content calendar; reconnect in February"],
+      ],
+    },
+    result: "Both test calls were logged correctly, but only after three rounds of testing. On the first run the paused bakery was put in Contract Sent, so I rewrote the stage prompt as rules checked in order, with \"paused or postponed 3+ months\" before \"contract sent\". The action items mixed up who does what, so the prompt now asks only for the agency's own to-dos and includes a worked example. HubSpot's Make modules also stored note and task times as midnight; an extra API step now sets the exact time. The follow-up emails stay gracious and never repeat a client's money worries or name competitors.",
+    skills: ["CRM hygiene", "Sales process & deal stages", "Prompt design with ordered rules", "Few-shot prompting", "HubSpot API", "Testing & iteration"],
+  },
+
   "stale-deal-alert": {
     title: "AI Stale Deal Alert",
     sub: "HubSpot CRM pipeline hygiene",

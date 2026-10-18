@@ -79,7 +79,7 @@ export const workCategories = [
 ];
 
 export const experience = [
-  { y: "2024", role: "Digital Marketing Associate", co: "STOP Marketing Agency", desc: "Plan and run digital campaigns across social, email and web; collaborate with design & dev to ship integrated, results-driven work.", tag: "Present" },
+  { y: "2025", role: "Digital Marketing Associate", co: "STOP Marketing Agency", desc: "Plan and run digital campaigns across social, email and web; collaborate with design & dev to ship integrated, results-driven work.", tag: "Present" },
   { y: "2025", role: "Co-Founder / Web Developer", co: "Poply Inc.", desc: "Built & maintained 5+ WordPress sites, lifting client site speed ~35% and cutting downtime under 1% annually.", tag: "Present" },
   { y: "2023", role: "Junior Software Engineer Intern", co: "Tech Mahindra", desc: "Integrated REST APIs and configured PEGA case types, cutting manual data entry 40% and resolution steps 15–20%.", tag: "Internship" },
   { y: "2022", role: "Full-Stack Developer Intern", co: "A R Luxury Management", desc: "Built FLXPAY with React/Next.js and designed full UI/UX in Figma, increasing site traffic 10%.", tag: "Internship" },

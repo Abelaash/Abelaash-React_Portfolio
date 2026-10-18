@@ -48,6 +48,13 @@ const AutomationCaseStudy = () => {
         {cs.steps.map((s, i) => <li key={i}>{s}</li>)}
       </ol>
 
+      {cs.extraImg && (
+        <figure className="case-shot">
+          <img src={cs.extraImg} alt={cs.extraImgAlt} />
+          <figcaption>{cs.extraCaption}</figcaption>
+        </figure>
+      )}
+
       {cs.table && (
         <div className="case-table">
           <table>

@@ -6,6 +6,7 @@ import competitorMonitor from "../assets/automation/competitor-monitor.jpg";
 import weeklyAdReport from "../assets/automation/weekly-ad-report.jpg";
 import adAnomalyAlert from "../assets/automation/ad-anomaly-alert.jpg";
 import staleDealAlert from "../assets/automation/stale-deal-alert.jpg";
+import staleDealPipeline from "../assets/automation/stale-deal-pipeline.jpg";
 
 /**
  * AI Automation case studies — one entry per Make.com scenario.
@@ -20,6 +21,9 @@ export const automations = {
     imgAlt: "Make.com scenario: HubSpot deal search, iterator, variables, two AI steps, HubSpot task, text aggregator, email",
     lead: "Every weekday morning the alert finds open deals that have gone quiet, explains the risk, drafts a follow-up email and puts a task for each one in HubSpot — then sends one digest of who to chase today.",
     stack: ["Make.com", "Make AI Toolkit", "HubSpot CRM", "HubSpot API", "Email"],
+    extraImg: staleDealPipeline,
+    extraImgAlt: "HubSpot deal board: overdue test deals each show a follow-up task due in 4 hours",
+    extraCaption: "The HubSpot pipeline after a run: each stale deal now carries a follow-up task",
     problem: "Deals rarely die with a \"no\" — they go quiet. A proposal waits for a partner's review, a contract sits unsigned after a holiday, and nobody notices until the forecast is wrong. Agencies need the stalled deals surfaced daily, with the follow-up already started.",
     trigger: "A weekday schedule at 07:50 Oslo time, before the sales day starts.",
     steps: [

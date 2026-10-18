@@ -5,6 +5,7 @@ import seoBrief from "../assets/automation/seo-brief.jpg";
 import competitorMonitor from "../assets/automation/competitor-monitor.jpg";
 import weeklyAdReport from "../assets/automation/weekly-ad-report.jpg";
 import adAnomalyAlert from "../assets/automation/ad-anomaly-alert.jpg";
+import staleDealAlert from "../assets/automation/stale-deal-alert.jpg";
 
 /**
  * AI Automation case studies — one entry per Make.com scenario.
@@ -12,6 +13,36 @@ import adAnomalyAlert from "../assets/automation/ad-anomaly-alert.jpg";
  * through their `route` field, so keep the two in sync.
  */
 export const automations = {
+  "stale-deal-alert": {
+    title: "AI Stale Deal Alert",
+    sub: "HubSpot CRM pipeline hygiene",
+    img: staleDealAlert,
+    imgAlt: "Make.com scenario: HubSpot deal search, iterator, variables, two AI steps, HubSpot task, text aggregator, email",
+    lead: "Every weekday morning the alert finds open deals that have gone quiet, explains the risk, drafts a follow-up email and puts a task for each one in HubSpot — then sends one digest of who to chase today.",
+    stack: ["Make.com", "Make AI Toolkit", "HubSpot CRM", "HubSpot API", "Email"],
+    problem: "Deals rarely die with a \"no\" — they go quiet. A proposal waits for a partner's review, a contract sits unsigned after a holiday, and nobody notices until the forecast is wrong. Agencies need the stalled deals surfaced daily, with the follow-up already started.",
+    trigger: "A weekday schedule at 07:50 Oslo time, before the sales day starts.",
+    steps: [
+      "A HubSpot API search finds open deals in the sales pipeline that are past their expected close date, or have had no updates for 14+ days (two OR-ed filter groups, oldest first).",
+      "An iterator handles each deal; Make calculates days past the close date and turns stage IDs into readable names.",
+      "One AI step writes the risk and the single next step for today, using only the deal's notes and stage.",
+      "A second AI step drafts a short, friendly follow-up email tied to the deal's situation — no fake urgency, no discounts.",
+      "HubSpot: a follow-up task is created and linked to the deal, holding the analysis and the email draft; deals more than 14 days overdue get High priority.",
+      "All deals are combined into one digest email with a link to each task.",
+    ],
+    table: {
+      head: ["Test deal", "Stage", "Close date", "Result"],
+      rows: [
+        ["Tindefjell Outdoor – SEO + Content", "Decision Maker Bought-In", "30 Sep", "Flagged · High priority"],
+        ["Fjord Dental – Google Ads", "Presentation Scheduled", "2 Oct", "Flagged · High priority"],
+        ["Bakeriet Grünerløkka – Meta Ads", "Contract Sent", "9 Oct", "Flagged · Medium priority"],
+        ["Nordlys Fitness – Paid Social", "Qualified to Buy", "20 Nov", "Not stale · skipped"],
+      ],
+    },
+    result: "Tested on four sample deals for fictional Oslo businesses: the three overdue deals each got a linked HubSpot task with a risk note and email draft, the healthy deal was correctly skipped, and one digest email listed all three. The built-in HubSpot search module couldn't combine \"overdue\" OR \"inactive\" in one query, so I called the HubSpot search API directly with two filter groups. The same flow maps to GoHighLevel opportunities.",
+    skills: ["CRM pipeline management", "HubSpot API (search filters)", "Iterators & aggregators", "Sales follow-up copy", "Daily digest alerting"],
+  },
+
   "weekly-ad-report": {
     title: "AI Weekly Ad Performance Report",
     sub: "Google Ads + Meta → Google Doc",

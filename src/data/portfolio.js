@@ -35,41 +35,42 @@ export const work = [
   // Newest work first. Grid order and CATEGORY_ORDER (pill order) agree.
 
   // ── AI Automation — Make.com + AI, built Oct 2026 ──
-  { n: "01", t: "AI Weekly Ad Performance Report", y: "'26", cat: "AI Automation", desc: "Turns Google Ads and Meta Ads data into a client-ready weekly report in Google Docs, with AI analysis and recommendations.", tags: ["Make.com", "AI", "Paid Media"], img: automations["weekly-ad-report"].img, link: null, route: "/automation/weekly-ad-report", status: "live" },
-  { n: "02", t: "AI Ad Spend Anomaly Alert", y: "'26", cat: "AI Automation", desc: "Checks every campaign daily against its 7-day average and emails an alert when spend spikes, drops or conversions stop.", tags: ["Make.com", "AI", "Paid Media"], img: automations["ad-anomaly-alert"].img, link: null, route: "/automation/ad-anomaly-alert", status: "live" },
-  { n: "03", t: "AI Lead-to-Deal Pipeline", y: "'26", cat: "AI Automation", desc: "Scores inbound leads with AI and creates the HubSpot contact, deal and follow-up task automatically.", tags: ["Make.com", "AI", "HubSpot CRM"], img: automations["lead-to-deal"].img, link: null, route: "/automation/lead-to-deal", status: "live" },
-  { n: "04", t: "AI Competitor Website Monitor", y: "'26", cat: "AI Automation", desc: "Watches competitor websites for changes and summarises what's new with AI.", tags: ["Make.com", "AI", "Monitoring"], img: automations["competitor-monitor"].img, link: null, route: "/automation/competitor-monitor", status: "live" },
-  { n: "05", t: "AI SEO Content Brief Generator", y: "'26", cat: "AI Automation", desc: "Turns target keywords into structured SEO content briefs, saved to Google Sheets & Docs.", tags: ["Make.com", "AI", "SEO"], img: automations["seo-brief"].img, link: null, route: "/automation/seo-brief", status: "live" },
-  { n: "06", t: "AI Ad Copy Localizer (EN → NO)", y: "'26", cat: "AI Automation", desc: "Adapts English ad copy into natural Norwegian for local campaigns.", tags: ["Make.com", "AI", "Paid Media"], img: automations["ad-localizer"].img, link: null, route: "/automation/ad-localizer", status: "live" },
-  { n: "07", t: "AI Content Repurposing Engine", y: "'26", cat: "AI Automation", desc: "Takes new posts from an RSS feed and repurposes them into ready-to-use social content.", tags: ["Make.com", "AI", "Content"], img: automations["content-repurposing"].img, link: null, route: "/automation/content-repurposing", status: "live" },
+  { n: "01", t: "AI Stale Deal Alert", y: "'26", cat: "AI Automation", desc: "Finds stalled HubSpot deals every morning, drafts a follow-up email and creates a prioritised task for each.", tags: ["Make.com", "AI", "HubSpot CRM"], img: automations["stale-deal-alert"].img, link: null, route: "/automation/stale-deal-alert", status: "live" },
+  { n: "02", t: "AI Weekly Ad Performance Report", y: "'26", cat: "AI Automation", desc: "Turns Google Ads and Meta Ads data into a client-ready weekly report in Google Docs, with AI analysis and recommendations.", tags: ["Make.com", "AI", "Paid Media"], img: automations["weekly-ad-report"].img, link: null, route: "/automation/weekly-ad-report", status: "live" },
+  { n: "03", t: "AI Ad Spend Anomaly Alert", y: "'26", cat: "AI Automation", desc: "Checks every campaign daily against its 7-day average and emails an alert when spend spikes, drops or conversions stop.", tags: ["Make.com", "AI", "Paid Media"], img: automations["ad-anomaly-alert"].img, link: null, route: "/automation/ad-anomaly-alert", status: "live" },
+  { n: "04", t: "AI Lead-to-Deal Pipeline", y: "'26", cat: "AI Automation", desc: "Scores inbound leads with AI and creates the HubSpot contact, deal and follow-up task automatically.", tags: ["Make.com", "AI", "HubSpot CRM"], img: automations["lead-to-deal"].img, link: null, route: "/automation/lead-to-deal", status: "live" },
+  { n: "05", t: "AI Competitor Website Monitor", y: "'26", cat: "AI Automation", desc: "Watches competitor websites for changes and summarises what's new with AI.", tags: ["Make.com", "AI", "Monitoring"], img: automations["competitor-monitor"].img, link: null, route: "/automation/competitor-monitor", status: "live" },
+  { n: "06", t: "AI SEO Content Brief Generator", y: "'26", cat: "AI Automation", desc: "Turns target keywords into structured SEO content briefs, saved to Google Sheets & Docs.", tags: ["Make.com", "AI", "SEO"], img: automations["seo-brief"].img, link: null, route: "/automation/seo-brief", status: "live" },
+  { n: "07", t: "AI Ad Copy Localizer (EN → NO)", y: "'26", cat: "AI Automation", desc: "Adapts English ad copy into natural Norwegian for local campaigns.", tags: ["Make.com", "AI", "Paid Media"], img: automations["ad-localizer"].img, link: null, route: "/automation/ad-localizer", status: "live" },
+  { n: "08", t: "AI Content Repurposing Engine", y: "'26", cat: "AI Automation", desc: "Takes new posts from an RSS feed and repurposes them into ready-to-use social content.", tags: ["Make.com", "AI", "Content"], img: automations["content-repurposing"].img, link: null, route: "/automation/content-repurposing", status: "live" },
 
   // ── Paid media — real work, case studies in progress ──
-  { n: "08", t: "Laser Spot", y: "'26", cat: "Marketing", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
-  { n: "09", t: "Eggless Cake Shop", y: "'26", cat: "Marketing", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "09", t: "Laser Spot", y: "'26", cat: "Marketing", desc: "Search & Performance Max campaign build for a local clinic.", tags: ["Google Ads", "Search", "PMax"], img: null, link: null, status: "soon", eta: "Aug 2026" },
+  { n: "10", t: "Eggless Cake Shop", y: "'26", cat: "Marketing", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
 
   // ── Print / brand design ──
-  { n: "10", t: "Kaboom Wings — Menu", y: "'26", cat: "Canva", desc: "Trifold and dine-in menus built on a comic pop-art brand system.", tags: ["Canva", "Print", "Menu"], img: KaboomWings, link: "/pdf/KaboomWingsMenu.pdf", status: "live" },
-  { n: "11", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: mystiqueresto, link: "/pdf/MystiqueMenu.pdf", status: "live" },
+  { n: "11", t: "Kaboom Wings — Menu", y: "'26", cat: "Canva", desc: "Trifold and dine-in menus built on a comic pop-art brand system.", tags: ["Canva", "Print", "Menu"], img: KaboomWings, link: "/pdf/KaboomWingsMenu.pdf", status: "live" },
+  { n: "12", t: "Mystique Resto — Menu", y: "'24", cat: "Canva", desc: "Print menu for a premium restaurant & lounge.", tags: ["Canva", "Print", "Menu"], img: mystiqueresto, link: "/pdf/MystiqueMenu.pdf", status: "live" },
 
   // ── Shipped client work ──
-  { n: "12", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: StopMarketing, link: "https://stopmarketing.ag/", status: "live" },
-  { n: "13", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Restaurant"], img: mystiqueresto, link: "https://mystiqueresto.com/", status: "live" },
-  { n: "14", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "Restaurant"], img: halalstreetWeb, link: "https://halalstreeteatz.com/", status: "live" },
+  { n: "13", t: "STOP Marketing", y: "'25", cat: "WordPress", desc: "Agency website — current employer.", tags: ["WordPress", "Agency"], img: StopMarketing, link: "https://stopmarketing.ag/", status: "live" },
+  { n: "14", t: "Mystique Resto", y: "'25", cat: "WordPress", desc: "Premium restaurant & lounge.", tags: ["WordPress", "Restaurant"], img: mystiqueresto, link: "https://mystiqueresto.com/", status: "live" },
+  { n: "15", t: "HalalStreetEatz", y: "'25", cat: "WordPress", desc: "Restaurant site with online ordering.", tags: ["WordPress", "Restaurant"], img: halalstreetWeb, link: "https://halalstreeteatz.com/", status: "live" },
 
   // ── Dev ──
-  { n: "15", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },
-  { n: "16", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager", status: "live" },
+  { n: "16", t: "Movie Recommendation App", y: "'25", cat: "Dev", desc: "AI recommendation system — Django + AWS.", tags: ["React Native", "Django", "AI"], img: movie, link: "https://github.com/Abelaash/MovieCapstoneProject", status: "live" },
+  { n: "17", t: "Soccer Management System", y: "'24", cat: "Dev", desc: "Football manager app — ASP.NET MVC.", tags: ["ASP.NET", "C#", "API"], img: footballmanager, link: "https://github.com/Abelaash/cpan369_FootballManager", status: "live" },
 
   // ── Figma ──
-  { n: "17", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Web app mockup for a street-food brand.", tags: ["Figma", "Web"], img: halalstreeteatz, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ", status: "live" },
+  { n: "18", t: "HalalStreetEatz App", y: "'24", cat: "Figma", desc: "Web app mockup for a street-food brand.", tags: ["Figma", "Web"], img: halalstreeteatz, link: "https://www.figma.com/design/7LOnsYC3xL7m6Aotvbbb2A/HALALSTREETEATZ", status: "live" },
 
   // ── Concept work — self-initiated, labelled as such ──
-  { n: "18", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Self-initiated concept — sustainable architecture studio, Toronto.", tags: ["Webflow", "Brand"], img: canopy, link: null, status: "concept" },
-  { n: "19", t: "Arktis", y: "'26", cat: "Webflow", desc: "Self-initiated concept — Nordic cold-brew coffee brand.", tags: ["Webflow", "E-comm"], img: arktis, link: null, status: "concept" },
-  { n: "20", t: "The Laurel", y: "'26", cat: "Webflow", desc: "Self-initiated concept — culture & design editorial journal.", tags: ["Webflow", "Editorial"], img: laurel, link: null, status: "concept" },
-  { n: "21", t: "Lys", y: "'26", cat: "Webflow", desc: "Self-initiated concept — contemporary art exhibition site.", tags: ["Webflow", "Culture"], img: lys, link: null, status: "concept" },
-  { n: "22", t: "Nordvind Gear", y: "'26", cat: "Webflow", desc: "Self-initiated concept — outdoor gear brand.", tags: ["Webflow", "Brand"], img: fjordkraft, link: null, status: "concept" },
-  { n: "23", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Self-initiated concept — AI productivity SaaS landing page.", tags: ["Webflow", "SaaS"], img: clearpath, link: null, status: "concept" },
+  { n: "19", t: "Canopy Studio", y: "'26", cat: "Webflow", desc: "Self-initiated concept — sustainable architecture studio, Toronto.", tags: ["Webflow", "Brand"], img: canopy, link: null, status: "concept" },
+  { n: "20", t: "Arktis", y: "'26", cat: "Webflow", desc: "Self-initiated concept — Nordic cold-brew coffee brand.", tags: ["Webflow", "E-comm"], img: arktis, link: null, status: "concept" },
+  { n: "21", t: "The Laurel", y: "'26", cat: "Webflow", desc: "Self-initiated concept — culture & design editorial journal.", tags: ["Webflow", "Editorial"], img: laurel, link: null, status: "concept" },
+  { n: "22", t: "Lys", y: "'26", cat: "Webflow", desc: "Self-initiated concept — contemporary art exhibition site.", tags: ["Webflow", "Culture"], img: lys, link: null, status: "concept" },
+  { n: "23", t: "Nordvind Gear", y: "'26", cat: "Webflow", desc: "Self-initiated concept — outdoor gear brand.", tags: ["Webflow", "Brand"], img: fjordkraft, link: null, status: "concept" },
+  { n: "24", t: "Clearpath", y: "'26", cat: "Webflow", desc: "Self-initiated concept — AI productivity SaaS landing page.", tags: ["Webflow", "SaaS"], img: clearpath, link: null, status: "concept" },
 ];
 
 // Derived so a pill can never outlive its projects.

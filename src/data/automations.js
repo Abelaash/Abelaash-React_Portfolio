@@ -8,6 +8,7 @@ import adAnomalyAlert from "../assets/automation/ad-anomaly-alert.jpg";
 import staleDealAlert from "../assets/automation/stale-deal-alert.jpg";
 import staleDealPipeline from "../assets/automation/stale-deal-pipeline.jpg";
 import meetingNotesCrm from "../assets/automation/meeting-notes-crm.jpg";
+import utmBuilder from "../assets/automation/utm-builder.jpg";
 
 /**
  * AI Automation case studies — one entry per Make.com scenario.
@@ -15,6 +16,35 @@ import meetingNotesCrm from "../assets/automation/meeting-notes-crm.jpg";
  * through their `route` field, so keep the two in sync.
  */
 export const automations = {
+  "utm-builder": {
+    title: "AI UTM Link Builder",
+    sub: "Clean tracking links",
+    img: utmBuilder,
+    imgAlt: "Make.com scenario: Google Sheets trigger, variables, two AI steps, variables, Google Sheets update",
+    lead: "Campaign details typed any way people like — \"FB ads\", \"Mailchimp\", \"Høst Kampanje!\" — become tracking links that follow one naming plan, so GA4 reports stay clean.",
+    stack: ["Make.com", "Make AI Toolkit", "Google Sheets", "GA4 / UTM"],
+    problem: "When every marketer builds UTM links by hand, the same channel shows up in GA4 as \"Facebook\", \"fb\" and \"facebook-ads\", and campaign names arrive with spaces, capitals and Norwegian letters. Reports split, and nobody trusts the channel numbers.",
+    trigger: "A new row in the UTM Builder sheet: landing page, campaign name, source, medium, and optionally the ad name and keyword.",
+    steps: [
+      "Make cleans the campaign and ad names: lowercase, æ/ø/å to ae/o/a, punctuation removed, spaces to hyphens.",
+      "Make checks that the landing page starts with https://.",
+      "AI maps the typed source to the naming plan (google, facebook, instagram, linkedin, tiktok, youtube, newsletter, bing) — or answers UNKNOWN if nothing fits.",
+      "AI maps the typed medium the same way (cpc, paid_social, email, organic_social, display, video, referral).",
+      "Make builds the link: it adds to an existing ? query with &, includes utm_content and utm_term only when filled, and URL-encodes the keyword.",
+      "The row gets the clean UTM values, the tracked URL and Status = Ready — or Needs review with the reason, and no link.",
+    ],
+    table: {
+      head: ["Typed in", "Mapped to", "Campaign value"],
+      rows: [
+        ["FB ads / paid", "facebook / paid_social", "host-kampanje-2026-3-mnd-gratis"],
+        ["Google / CPC (+ keyword)", "google / cpc", "black-friday"],
+        ["Mailchimp / e-mail", "newsletter / email", "newsletter-oct"],
+      ],
+    },
+    result: "All three test campaigns came out as valid, consistent links, including one whose landing page already had ?ref=home. In an earlier test a row with an unknown source and no https was correctly refused instead of producing a bad link. The split of work is deliberate: AI only translates human input onto a fixed list, and everything that must be exact — cleaning, validation, link building — is plain Make logic. My first version used regex patterns Make wouldn't run, so I replaced them with step-by-step text replacements.",
+    skills: ["Tracking & attribution (UTM, GA4)", "Naming conventions", "Data validation", "AI as a classifier", "Text processing in Make"],
+  },
+
   "meeting-notes-crm": {
     title: "AI Meeting Notes to CRM",
     sub: "Call notes → HubSpot",

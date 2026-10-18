@@ -11,6 +11,7 @@ import movie from "../assets/capstone.png";
 import footballmanager from "../assets/footballmanager.png";
 import halalstreetWeb from "../assets/HalalStreetEatzWeb.png";
 import KaboomWings from "../assets/kaboomwings.jpg";
+import { automations } from "./automations";
 
 // Uncomment once exported — CRA hard-fails the build on a missing asset.
 // import MystiqueMenuCover from "../assets/mystique-menu.png";
@@ -62,10 +63,12 @@ export const work = [
   { n: "16", t: "Eggless Cake Shop", y: "'26", cat: "Marketing", desc: "Full-funnel creative testing & retargeting for a specialty bakery.", tags: ["Meta Ads", "Creative", "Retargeting"], img: null, link: null, status: "soon", eta: "Aug 2026" },
 
   // ── AI Automation — Make.com scenarios ──────────────────────────
-  { n: "17", t: "AI Competitor Website Monitor", y: "'26", cat: "AI Automation", desc: "Watches competitor websites for changes and summarises what's new with AI.", tags: ["Make.com", "AI", "Monitoring"], img: null, link: null, status: "live" },
-  { n: "18", t: "AI SEO Content Brief Generator", y: "'26", cat: "AI Automation", desc: "Turns target keywords into structured SEO content briefs, saved to Google Sheets & Docs.", tags: ["Make.com", "AI", "SEO"], img: null, link: null, status: "live" },
-  { n: "19", t: "AI Ad Copy Localizer (EN → NO)", y: "'26", cat: "AI Automation", desc: "Adapts English ad copy into natural Norwegian for local campaigns.", tags: ["Make.com", "AI", "Paid Media"], img: null, link: null, status: "live" },
-  { n: "20", t: "AI Content Repurposing Engine", y: "'26", cat: "AI Automation", desc: "Takes new posts from an RSS feed and repurposes them into ready-to-use social content.", tags: ["Make.com", "AI", "Content"], img: null, link: null, status: "live" },
+  // `route` = internal case-study page (/automation/<slug>), content in data/automations.js.
+  { n: "17", t: "AI Lead-to-Deal Pipeline", y: "'26", cat: "AI Automation", desc: "Scores inbound leads with AI and creates the HubSpot contact, deal and follow-up task automatically.", tags: ["Make.com", "AI", "HubSpot CRM"], img: automations["lead-to-deal"].img, link: null, route: "/automation/lead-to-deal", status: "live" },
+  { n: "18", t: "AI Competitor Website Monitor", y: "'26", cat: "AI Automation", desc: "Watches competitor websites for changes and summarises what's new with AI.", tags: ["Make.com", "AI", "Monitoring"], img: automations["competitor-monitor"].img, link: null, route: "/automation/competitor-monitor", status: "live" },
+  { n: "19", t: "AI SEO Content Brief Generator", y: "'26", cat: "AI Automation", desc: "Turns target keywords into structured SEO content briefs, saved to Google Sheets & Docs.", tags: ["Make.com", "AI", "SEO"], img: automations["seo-brief"].img, link: null, route: "/automation/seo-brief", status: "live" },
+  { n: "20", t: "AI Ad Copy Localizer (EN → NO)", y: "'26", cat: "AI Automation", desc: "Adapts English ad copy into natural Norwegian for local campaigns.", tags: ["Make.com", "AI", "Paid Media"], img: automations["ad-localizer"].img, link: null, route: "/automation/ad-localizer", status: "live" },
+  { n: "21", t: "AI Content Repurposing Engine", y: "'26", cat: "AI Automation", desc: "Takes new posts from an RSS feed and repurposes them into ready-to-use social content.", tags: ["Make.com", "AI", "Content"], img: automations["content-repurposing"].img, link: null, route: "/automation/content-repurposing", status: "live" },
 ];
 
 // Derived so a pill can never outlive its projects.

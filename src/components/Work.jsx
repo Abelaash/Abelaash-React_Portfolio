@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Eyebrow, Reveal } from "./Reveal";
 import { work, workCategories } from "../data/portfolio";
 
@@ -20,7 +21,7 @@ const ProjectCard = ({ p }) => {
           {p.tags.map((t) => <span key={t}>{t}</span>)}
         </div>
       </div>
-      {p.link && <div className="proj-arrow">↗</div>}
+      {(p.link || p.route) && <div className="proj-arrow">{p.route ? "→" : "↗"}</div>}
     </>
   );
 
@@ -32,7 +33,9 @@ const ProjectCard = ({ p }) => {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
-      {p.link ? (
+      {p.route ? (
+        <Link to={p.route} className="proj proj-link">{inner}</Link>
+      ) : p.link ? (
         <a href={p.link} target="_blank" rel="noreferrer" className="proj proj-link">{inner}</a>
       ) : (
         <div className="proj">{inner}</div>
@@ -51,7 +54,7 @@ const Work = () => {
         <Eyebrow num="(02)">Selected work</Eyebrow>
         <Reveal className="work-head">
           <h2>Things I've built</h2>
-          <span className="count">— twelve+ projects</span>
+          <span className="count">— twenty+ projects</span>
         </Reveal>
         <Reveal className="filters" delay={0.05}>
           {workCategories.map((c) => (

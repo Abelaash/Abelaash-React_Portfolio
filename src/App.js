@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 
 import CapstoneProject from "./components/CapstoneProject";
 import FootballManager from "./components/FootballManager";
+import AutomationCaseStudy from "./components/AutomationCaseStudy";
 
 function Home() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/movie-recommendation" element={<CapstoneProject />} />
         <Route path="/football-manager" element={<FootballManager />} />
+        <Route path="/automation/:slug" element={<AutomationCaseStudy />} />
       </Routes>
     </Router>
     </MotionConfig>

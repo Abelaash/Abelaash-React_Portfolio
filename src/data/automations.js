@@ -3,6 +3,8 @@ import leadToDeal from "../assets/automation/lead-to-deal.jpg";
 import adLocalizer from "../assets/automation/ad-localizer.jpg";
 import seoBrief from "../assets/automation/seo-brief.jpg";
 import competitorMonitor from "../assets/automation/competitor-monitor.jpg";
+import weeklyAdReport from "../assets/automation/weekly-ad-report.jpg";
+import adAnomalyAlert from "../assets/automation/ad-anomaly-alert.jpg";
 
 /**
  * AI Automation case studies — one entry per Make.com scenario.
@@ -10,6 +12,66 @@ import competitorMonitor from "../assets/automation/competitor-monitor.jpg";
  * through their `route` field, so keep the two in sync.
  */
 export const automations = {
+  "weekly-ad-report": {
+    title: "AI Weekly Ad Performance Report",
+    sub: "Google Ads + Meta → Google Doc",
+    img: weeklyAdReport,
+    imgAlt: "Make.com scenario: two Google Sheets reads, text aggregator, two AI steps, Google Docs, Google Sheets log",
+    lead: "Every Monday morning a client-ready paid ads report appears in Google Drive: a headline, a KPI table for Google Ads and Meta Ads, an executive summary, what changed and three recommendations for next week.",
+    stack: ["Make.com", "Make AI Toolkit", "Google Sheets", "Google Docs"],
+    problem: "Weekly client reporting eats hours at an agency: export numbers from each ad platform, compare with last week, then write the story and next steps. It is repetitive, but the writing still has to be accurate and client-friendly.",
+    trigger: "A weekly schedule, Monday 09:00 Oslo time. Daily campaign data (spend, clicks, conversions, revenue) lives in a Google Sheet — tested with 14 days of sample data for a fictional Oslo gym chain across 2 Google Ads and 2 Meta Ads campaigns.",
+    steps: [
+      "Google Sheets formulas split the data into this week and last week and calculate spend, conversions, CPA, ROAS and week-over-week change for the total, each platform and each campaign.",
+      "Make reads the summary and builds the KPI table, adding +/− signs and an Improving / Worsening label per segment.",
+      "One AI step writes the executive summary, a plain-English line per campaign and exactly three recommendations — using only numbers from the table.",
+      "A second AI step writes a one-sentence headline from the totals.",
+      "Google Docs creates the report, named by client and week.",
+      "A log sheet gets one row per week with the key totals, the headline and the report link.",
+    ],
+    table: {
+      head: ["Campaign", "CPA (vs last week)", "ROAS", "What the report said"],
+      rows: [
+        ["Search - Membership", "182 NOK (−28.6%)", "3.64", "Scale: strongest improvement"],
+        ["Performance Max", "195 NOK (−21.1%)", "2.88", "Improving"],
+        ["Prospecting - Video", "712 NOK (+9.7%)", "0.82", "Biggest concern: rework creative or pause"],
+        ["Retargeting", "98 NOK (−19%)", "6.71", "Shift budget here"],
+      ],
+    },
+    result: "The report found the right story: conversions up 31.9% at a 20.6% lower CPA, with Prospecting - Video as the one campaign losing money. The first run had two AI mistakes — it wrote spend as −4.6% when it had risen, and called a falling CPA a \"concern\". The fix was to never let the AI do maths or read raw signs: Sheets calculates everything, and Make passes labelled data (up/down, Improving/Worsening). The second run was accurate. In production the sheet is fed by the Google Ads and Meta Ads APIs instead of sample data.",
+    skills: ["Paid media reporting", "KPI analysis (CPA, ROAS)", "Google Ads & Meta Ads", "Guardrails against AI number errors", "Automated client deliverables"],
+  },
+
+  "ad-anomaly-alert": {
+    title: "AI Ad Spend Anomaly Alert",
+    sub: "Daily budget watchdog",
+    img: adAnomalyAlert,
+    imgAlt: "Make.com scenario: Google Sheets, AI step, Google Sheets log, text aggregator, email",
+    lead: "A daily check that compares every campaign with its own 7-day average and emails the account manager when spend spikes, spend collapses or conversions stop — with likely causes and what to check first.",
+    stack: ["Make.com", "Make AI Toolkit", "Google Sheets", "Email"],
+    problem: "A broken pixel, a disapproved ad or a runaway budget can burn a client's money for days before anyone opens the ad account. Agencies need to catch problems the morning they start, not at the weekly report.",
+    trigger: "A daily schedule, 07:55 Oslo time, before the working day starts.",
+    steps: [
+      "Google Sheets compares each campaign's latest day with its average for the previous 7 days.",
+      "Rules label each campaign: Spend spike (more than 50% above average), Spend drop (more than 50% below), Zero conversions (none, when it normally gets 1.5+ a day) or OK.",
+      "A filter passes only the campaigns that are not OK.",
+      "AI writes a short note per issue: what happened, the two most likely causes on that platform and three things to check in the ad interface.",
+      "Each issue is logged to an alert history sheet.",
+      "One email collects all issues of the day — sent only when there is at least one.",
+    ],
+    table: {
+      head: ["Campaign", "Detected", "Numbers", "First check suggested"],
+      rows: [
+        ["Performance Max", "Spend spike", "2,710 vs 1,084 NOK avg (+150%)", "Recent budget / bid changes"],
+        ["Prospecting - Video", "Zero conversions", "0 vs 1.9 avg, 1,320 NOK spent", "Pixel and events in Events Manager"],
+        ["Retargeting", "Spend drop", "135 vs 492 NOK avg (−73%)", "Delivery status and audience size"],
+        ["Search - Membership", "OK", "1,590 vs 1,610 NOK avg", "No alert"],
+      ],
+    },
+    result: "On the test day the monitor caught all three planted problems and correctly ignored the healthy Search campaign, sending one combined alert email. The detection itself is plain spreadsheet rules, so it is predictable and easy to tune per client; the AI only explains and suggests checks, which is where it adds speed.",
+    skills: ["Paid media monitoring", "Anomaly detection rules", "Pacing & tracking QA", "Filters & aggregation", "Alerting workflows"],
+  },
+
   "lead-to-deal": {
     title: "AI Lead-to-Deal Pipeline",
     sub: "HubSpot CRM",

@@ -87,10 +87,11 @@ export const experience = [
 ];
 
 export const skills = [
+  { h: "Marketing", list: ["Google Ads", "Meta Ads", "SEO", "GA4", "Google Tag Manager", "Campaign strategy", "Email"] },
+  { h: "AI Automation & CRM", list: ["Make.com", "AI workflows", "Prompt design", "HubSpot CRM", "GoHighLevel", "Webhooks & APIs"] },
   { h: "Development", list: ["React", "JavaScript", "HTML/CSS", "Node", "Python", "Django", "PHP"] },
-  { h: "Platforms / CMS", list: ["Webflow", "Drupal", "WordPress", "Shopify", "Elementor"] },
+  { h: "Platforms / CMS", list: ["Webflow", "WordPress", "Shopify", "Elementor"] },
   { h: "Design & Tools", list: ["Figma", "Canva", "Git", "AWS", "Docker", "Vercel"] },
-  { h: "Marketing", list: ["Campaign strategy", "SEO", "Email", "Analytics"] },
 ];
 
 export const education = [

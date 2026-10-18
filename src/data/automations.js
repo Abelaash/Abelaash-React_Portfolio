@@ -39,7 +39,7 @@ export const automations = {
         ["Nordlys Fitness – Paid Social", "Qualified to Buy", "20 Nov", "Not stale · skipped"],
       ],
     },
-    result: "Tested on four sample deals for fictional Oslo businesses: the three overdue deals each got a linked HubSpot task with a risk note and email draft, the healthy deal was correctly skipped, and one digest email listed all three. The built-in HubSpot search module couldn't combine \"overdue\" OR \"inactive\" in one query, so I called the HubSpot search API directly with two filter groups. The same flow maps to GoHighLevel opportunities.",
+    result: "Tested on four sample deals for fictional Oslo businesses: the three overdue deals each got a linked HubSpot task with a risk note and email draft, the healthy deal was correctly skipped, and one digest email listed all three. The built-in HubSpot search module couldn't combine \"overdue\" OR \"inactive\" in one query, so I called the HubSpot search API directly with two filter groups. Checking the pipeline afterwards showed the new tasks as already overdue: HubSpot was reading the due time as midnight. Sending it as an explicit UTC timestamp fixed it, and I applied the same fix to the Lead-to-Deal pipeline. The same flow maps to GoHighLevel opportunities.",
     skills: ["CRM pipeline management", "HubSpot API (search filters)", "Iterators & aggregators", "Sales follow-up copy", "Daily digest alerting"],
   },
 

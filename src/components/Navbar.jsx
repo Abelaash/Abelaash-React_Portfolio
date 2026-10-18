@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -127,16 +126,6 @@ const Navbar = () => {
               rel="noreferrer"
             >
               GitHub <FaGithub size={24} />
-            </a>
-          </li>
-          <li className="ml-[-100px] flex h-[56px] w-[160px] items-center justify-between border border-l-0 border-t-0 border-[#f4f1ea]/[.12] bg-[#121210] px-4 duration-300 hover:ml-[-10px] hover:bg-[#ff5b1f]">
-            <a
-              className="flex w-full items-center justify-between text-sm text-[#f4f1ea]"
-              href="/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Resume <BsFillPersonLinesFill size={24} />
             </a>
           </li>
         </ul>
